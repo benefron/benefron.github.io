@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Helvetica+Neue:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
@@ -20,11 +20,10 @@
 
     <nav class="site-nav">
       <ul>
-        <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}">👤 About</a></li>
-        <li><a href="{{ '/projects' | relative_url }}">💻 Projects</a></li>
-        <li><a href="{{ '/publications' | relative_url }}">📚 Publications</a></li>
-        <li><a href="{{ '/cv' | relative_url }}">📄 CV</a></li>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/cv' | relative_url }}">CV</a></li>
       </ul>
     </nav>
 
@@ -32,11 +31,11 @@
       {{ content }}
 
       <footer class="site-footer">
-        <p>© {{ 'now' | date: "%Y" }} Ben Efron | Built with Jekyll & ❤️</p>
+        <p>© {{ 'now' | date: "%Y" }} Ben Efron</p>
         <p>
-          <a href="mailto:{{ site.email }}">📧 Email</a> •
-          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">💼 LinkedIn</a> •
-          <a href="https://github.com/{{ site.github_username }}">💻 GitHub</a>
+          <a href="mailto:{{ site.email }}">Email</a> •
+          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a> •
+          <a href="https://github.com/{{ site.github_username }}">GitHub</a>
         </p>
       </footer>
     </main>

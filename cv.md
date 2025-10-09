@@ -10,10 +10,10 @@ title: Curriculum Vitae
 </div>
 
 <div class="contact-info" style="justify-content: center; margin-bottom: 3rem;">
-  <a href="mailto:benefron@gmail.com" class="contact-item">📧 benefron@gmail.com</a>
-  <a href="tel:+32456825684" class="contact-item">📱 +32 456 825 684</a>
+  <a href="mailto:benefron@gmail.com" class="contact-item">benefron@gmail.com</a>
+  <a href="tel:+32456825684" class="contact-item">+32 456 825 684</a>
   <a href="https://www.linkedin.com/in/ben-efron-b19256b2/" class="contact-item">� LinkedIn</a>
-  <a href="https://github.com/benefron" class="contact-item">💻 GitHub</a>
+  <a href="https://github.com/benefron" class="contact-item">GitHub</a>
 </div>
 
 ---
