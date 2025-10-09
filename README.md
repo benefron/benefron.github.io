@@ -2,14 +2,21 @@
 
 Personal website for Ben Efron, PhD - Postdoctoral Fellow in Brain-Inspired Computing at University of Liège.
 
+🌐 **Live Site:** https://benefron.github.io
+
 ## About
 
 This is my professional portfolio website showcasing my research in systems neuroscience, brain-inspired computing, and my work applying biological principles to machine learning and edge computing technologies.
 
 **Site Features:**
-- Professional CV and publication list
-- Research projects and technical skills
-- Contact information and links
+- 🎨 Modern, professional design with custom CSS
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🧭 Sticky navigation with smooth transitions
+- 📄 Complete CV embedded in the site
+- 📚 Publication list with styled cards
+- 💻 Research projects showcase
+- 🎯 Contact information prominently displayed
+- ⚡ Fast loading static site
 
 ## Local Development
 
