@@ -1,15 +1,20 @@
 ---
-layout: page
+layout: default
 title: Curriculum Vitae
 ---
 
-# Ben Efron, PhD
+<div style="text-align: center; margin-bottom: 3rem;">
+  <h1 style="margin-bottom: 0.5rem;">Ben Efron, PhD</h1>
+  <p style="font-size: 1.3rem; color: #7c3aed; font-weight: 600;">Postdoctoral Fellow, Brain-Inspired Computing</p>
+  <p style="font-size: 1.1rem; color: #64748b;">University of Liège, Belgium</p>
+</div>
 
-**Postdoctoral Fellow, Brain-Inspired Computing**  
-University of Liège, Belgium
-
-📧 [benefron@gmail.com](mailto:benefron@gmail.com) | 📱 +32 456825684  
-🔗 [LinkedIn](https://www.linkedin.com/in/ben-efron-b19256b2/) | 💻 [GitHub](http://github.com/benefron)
+<div class="contact-info" style="justify-content: center; margin-bottom: 3rem;">
+  <a href="mailto:benefron@gmail.com" class="contact-item">📧 benefron@gmail.com</a>
+  <a href="tel:+32456825684" class="contact-item">📱 +32 456 825 684</a>
+  <a href="https://www.linkedin.com/in/ben-efron-b19256b2/" class="contact-item">� LinkedIn</a>
+  <a href="https://github.com/benefron" class="contact-item">💻 GitHub</a>
+</div>
 
 ---
 

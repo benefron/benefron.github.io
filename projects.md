@@ -1,7 +1,9 @@
 ---
-layout: page
-title: Research Projects
+layout: default
+title: Projects
 ---
+
+# 💻 Research Projects & Technical Portfolio
 
 ## Current Research
 
