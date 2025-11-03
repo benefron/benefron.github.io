@@ -6,3 +6,15 @@ vendor/
 .bundle/
 .DS_Store
 Gemfile.lock
+
+# Node/Next.js
+node_modules/
+.next/
+out/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.local

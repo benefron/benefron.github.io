@@ -1,52 +1,46 @@
-# Ben Efron, PhD - Professional Portfolio
+# Ben Efron · Computational Neuroscience Portfolio
 
-Personal portfolio website showcasing computational neuroscience research, neuroengineering projects, and publications.
+A statically generated personal site built with Next.js 14, React 18, Tailwind CSS, and Framer Motion. The site highlights research focus areas, an animated career timeline, publications, and technical skills with a crisp dark theme inspired by Cvless portfolios.
 
-## About
+## Features
 
-Postdoctoral Researcher at University of Liège working on:
-- HDMEA neuroengineering systems (collaboration with imec)
-- Closed-loop control of neuronal cultures  
-- Theoretical neuroscience & bio-inspired AI/ML
-- Clinical neuroscience applications
+- **Hero spotlight** with quick stats and primary calls-to-action.
+- **Research highlight** section combining narrative copy with imagery.
+- **Focus area grid** presenting domains of expertise at a glance.
+- **Animated trajectory timeline** driven by Framer Motion.
+- **Publications** list with quick links to external resources.
+- **Skills column layout** and contact cards for rapid outreach.
 
-## Site Structure
+## Getting Started
 
-- **Home** (`index.md`) - Overview of current research and featured publication
-- **Research** (`research.md`) - Detailed project descriptions and technical capabilities
-- **Publications** (`publications.md`) - Published papers and media coverage
-- **CV** (`cv.md`) - Full curriculum vitae
-
-## Key Features
-
-- Sophisticated academic design with creative visual elements
-- Updated Current Biology (2025) publication with press coverage links
-- Comprehensive HDMEA research project descriptions
-- Streamlined navigation (removed redundancy)
-- Responsive layout with subtle animations
-
-## Local Development
+Install dependencies and start the local development server:
 
 ```bash
-bundle install
-bundle exec jekyll serve
+npm install
+npm run dev
 ```
 
-Visit `http://localhost:4000`
+Production build and lint checks:
+
+```bash
+npm run lint
+npm run build
+```
+
+The dev server runs on [http://localhost:3000](http://localhost:3000) by default.
+
+## Project Structure
+
+- `app/` – App Router layout, global styles, and page composition.
+- `components/` – Reusable UI sections (hero, focus grid, timeline, etc.).
+- `content/data.ts` – Structured data feeding hero, stats, focus areas, timeline, publications, and contact info.
+- `public/` – Static assets (images, documents).
+- `.vscode/tasks.json` – VS Code task to launch the Next.js dev server.
 
 ## Deployment
 
-Auto-deploys to [benefron.github.io](https://benefron.github.io) via GitHub Pages.
+The site builds as a fully static export via `npm run build`. Deploy by serving the generated `.next` output on any static hosting solution that supports Next.js (GitHub Pages via actions, Vercel, Netlify, etc.).
 
-## Technologies
+## License
 
-- Jekyll (Static site generator)
-- GitHub Pages
-- Jekyll Theme Cayman (Professional design)
-- Markdown for content
-
-## Contact
-
-- Email: benefron@gmail.com
-- LinkedIn: [ben-efron-b19256b2](https://www.linkedin.com/in/ben-efron-b19256b2/)
-- GitHub: [@benefron](https://github.com/benefron)
+All content © Ben Efron. Code is provided without an explicit license; contact the author for reuse permissions.
