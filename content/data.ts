@@ -1,6 +1,6 @@
 export const hero = {
   name: "Ben Efron, PhD",
-  title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems",
+  title: "Systems Neuroscientist Neural Coding & Behavior Bio-Inspired Sensing & Adaptive Systems",
   summary:
     "I study how neural systems encode and act on sensory information in natural behavior, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
   ctaPrimary: {
@@ -14,10 +14,10 @@ export const hero = {
 };
 
 export const stats = [
-  { label: "Scope", value: "Neural Coding & Behavior" },
-  { label: "Modalities", value: "Multimodal Experiments" },
-  { label: "Tools", value: "Open Tools & Analysis Workflows" },
-  { label: "Experience", value: "7+ years leading complex experiments & data pipelines" }
+  { label: "Scope", value: "Neuroscience and tech" },
+  { label: "Vision", value: "Neuromorphic engineering and NeuroAI" },
+  { label: "Tools", value: "Open Source & Automated Workflows" },
+  { label: "Experience", value: "7+ years Reserch, Experiments and data analysis" }
 ];
 
 export const focusAreas = [
@@ -35,15 +35,15 @@ export const focusAreas = [
     title: "Data & Modeling",
     description: "Applying statistical and machine learning approaches to neural and sensory data.",
     bullets: [
-      "Statistical inference & GLMs",
-      "Machine learning classifiers",
+      "Statistical inference",
+      "GLM, Classifiers, Regression, SSM",
       "Neural & audio signal processing",
       "Time-series alignment & decoding"
     ]
   },
   {
     title: "Experiment & Integration",
-    description: "Building and synchronizing multimodal experiments with rapid iteration.",
+    description: "Building complete complex experimental pipelines.",
     bullets: [
       "Electrophysiology pipelines",
       "Multi-sensor synchronization",
@@ -58,7 +58,7 @@ export const timeline = [
     year: "2024-Present",
     label: "Postdoctoral Researcher, Brain-Inspired Computing Lab (University of Liege)",
     description:
-      "Experimental systems neuroscience and neural data analysis focused on active sensing. Coordinate with imec engineers to adapt recording and control systems for closed-loop experiments, mentor students and interns, and connect neural activity with sensor dynamics and behavior."
+      "Experimental systems neuroscience and neural data analysis focused on active sensing. Coordinate with imec engineers to adapt recording and control systems for closed-loop experiments, mentor students and interns, and model and design Neuro-inspired algorithms."
   },
   {
     year: "2017-2024",

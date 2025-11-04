@@ -16,7 +16,7 @@ export default function HomePage() {
           <h2>About</h2>
         </div>
         <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-200">
-          I am an experimental systems neuroscientist studying how neural populations encode information during natural behavior. My work integrates
+          I am an experimental systems neuroscientist studying how neural populations encode information and how neuronal networks organize. My work integrates
           neural recordings, behavioral measurements, and sensory context to reveal how circuits extract structure from the world. I&apos;m now extending
           these principles toward bio-inspired sensing and computation, applying systems-level insight (pathway separation, adaptation, redundancy
           reduction) to guide sensing and processing strategies in artificial systems. I enjoy collaborating across neuroscience, computation, and
@@ -34,7 +34,7 @@ export default function HomePage() {
               <div className="space-y-6 lg:w-1/2">
                 <h3 className="text-2xl font-semibold text-white">Active Sensing Across Auditory and Somatosensory Cortices</h3>
                 <p className="text-sm leading-relaxed text-ink-200">
-                  Doctoral and postdoctoral research examine how whisker-generated sensory events are encoded during natural exploration, integrating neural,
+                  Doctoral research examine how whisker-generated sensory events are encoded during natural exploration, integrating neural,
                   behavioral, and sensory data streams to follow information as it is used online.
                 </p>
                 <ul className="space-y-3 text-sm text-ink-200">
