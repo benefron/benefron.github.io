@@ -9,7 +9,7 @@ export function SkillColumns() {
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {skills.map((group) => (
-          <article key={group.title} className="card-glow rounded-3xl bg-white/5 p-6 backdrop-blur">
+          <article key={group.title} className="card-glow rounded-3xl bg-white/5 p-5 backdrop-blur sm:p-6">
             <h3 className="text-lg font-semibold text-white">{group.title}</h3>
             <ul className="mt-4 space-y-2 text-sm text-ink-200">
               {group.items.map((skill) => (

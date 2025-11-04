@@ -15,7 +15,7 @@ export function MediaHighlights() {
             href={item.href}
             target="_blank"
             rel="noreferrer"
-            className="card-glow block rounded-3xl bg-white/5 p-6 text-left text-white transition hover:-translate-y-1"
+            className="card-glow block rounded-3xl bg-white/5 p-5 text-left text-white transition hover:-translate-y-1 sm:p-6"
           >
             <p className="text-sm font-semibold">{item.title}</p>
           </Link>

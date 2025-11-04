@@ -9,10 +9,10 @@ export function FocusGrid() {
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {focusAreas.map((item) => (
-          <article key={item.title} className="card-glow gradient-ring rounded-3xl bg-white/5 p-8 backdrop-blur">
+          <article key={item.title} className="card-glow gradient-ring rounded-3xl bg-white/5 p-6 backdrop-blur sm:p-7 md:p-8">
             <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
-            <p className="mt-6 text-sm leading-relaxed text-ink-200">{item.description}</p>
-            <ul className="mt-6 space-y-3 text-sm text-ink-200">
+            <p className="mt-4 text-sm leading-relaxed text-ink-200 sm:mt-6">{item.description}</p>
+            <ul className="mt-4 space-y-3 text-sm text-ink-200 sm:mt-6">
               {item.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-center gap-3">
                   <span className="h-2.5 w-2.5 rounded-full bg-brand-400" />

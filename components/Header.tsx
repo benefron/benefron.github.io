@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-white/10">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
         <Link href="#" className="font-display text-lg font-semibold tracking-wide text-white">
           Ben Efron
         </Link>
@@ -49,7 +49,7 @@ export function Header() {
             exit={{ height: 0, opacity: 0 }}
             className="border-t border-white/10 bg-slate-950/95 md:hidden"
           >
-            <div className="mx-auto flex max-w-6xl flex-col px-6 py-4 text-sm uppercase tracking-widest text-ink-200">
+            <div className="mx-auto flex max-w-6xl flex-col px-4 py-4 text-sm uppercase tracking-widest text-ink-200 sm:px-6">
               {navLinks.map((link) => (
                 <a
                   key={link.label}

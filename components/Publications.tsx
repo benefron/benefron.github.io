@@ -10,7 +10,7 @@ export function Publications() {
       </div>
       <div className="space-y-6">
         {publications.map((paper) => (
-          <article key={paper.title} className="card-glow gradient-ring rounded-3xl bg-white/5 p-7 backdrop-blur">
+          <article key={paper.title} className="card-glow gradient-ring rounded-3xl bg-white/5 p-5 backdrop-blur sm:p-7">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <h3 className="text-xl font-semibold text-white">{paper.title}</h3>
               <span className="text-xs uppercase tracking-[0.35em] text-ink-300">{paper.venue}</span>

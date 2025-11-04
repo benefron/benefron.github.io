@@ -25,8 +25,8 @@ export function Timeline() {
         <p className="section-subtitle">Milestones linking experimental neuroscience, computation, and collaborative system design.</p>
       </div>
       <div className="relative mx-auto max-w-5xl">
-        <div className="absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2 bg-gradient-to-b from-brand-300 via-white/40 to-brand-600" />
-        <div className="space-y-10">
+        <div className="absolute inset-y-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-gradient-to-b from-brand-300 via-white/40 to-brand-600 md:block" />
+        <div className="space-y-8 md:space-y-10">
           {nodes.map((node) => (
             <motion.article
               key={node.year}
@@ -34,7 +34,7 @@ export function Timeline() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: node.delay, ease: "easeOut" }}
-              className={`relative flex flex-col gap-4 rounded-3xl bg-white/6 p-6 backdrop-blur-xl md:w-[calc(50%_-_1rem)] ${
+              className={`relative flex flex-col gap-4 rounded-3xl bg-white/6 p-5 backdrop-blur-xl sm:p-6 md:w-[calc(50%_-_1rem)] ${
                 node.side === "left" ? "timeline-left" : "timeline-right"
               }`}
             >

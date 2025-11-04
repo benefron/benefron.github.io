@@ -9,7 +9,7 @@ import { contact } from "@/content/data";
 
 export default function HomePage() {
   return (
-    <main className="space-y-24 pb-24">
+    <main className="space-y-16 pb-16 md:space-y-24 md:pb-24">
       <Hero />
       <section className="section" id="about">
         <div className="section-heading">
@@ -25,8 +25,8 @@ export default function HomePage() {
           <p className="section-subtitle">Linking active sensing, neural coding, and system-level design principles.</p>
         </div>
         <div className="rounded-3xl bg-[radial-gradient(circle_at_top,_rgba(67,56,202,0.35),_rgba(8,47,73,0.2))] p-1">
-          <div className="rounded-[calc(24px-1px)] border border-white/10 bg-slate-950/60 p-8 backdrop-blur">
-            <div className="flex flex-col gap-10 lg:flex-row">
+          <div className="rounded-[calc(24px-1px)] border border-white/10 bg-slate-950/60 p-6 backdrop-blur sm:p-8">
+            <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
               <div className="space-y-6 lg:w-1/2">
                 <h3 className="text-2xl font-semibold text-white">Systems‑Level Neural Computation & Adaptive Circuit Dynamics</h3>
                 <p className="text-sm leading-relaxed text-ink-200">
@@ -78,7 +78,7 @@ export default function HomePage() {
           <p className="section-subtitle">Let&apos;s explore collaborations in systems neuroscience, sensory coding, and adaptive sensing strategies.</p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          <a href={`mailto:${contact.email}`} className="card-glow rounded-3xl bg-white/5 p-6 text-left text-white transition hover:-translate-y-1">
+          <a href={`mailto:${contact.email}`} className="card-glow rounded-3xl bg-white/5 p-5 text-left text-white transition hover:-translate-y-1 sm:p-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ink-400">Email</p>
             <p className="mt-4 text-lg font-semibold">{contact.email}</p>
           </a>
@@ -86,12 +86,12 @@ export default function HomePage() {
             href={contact.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="card-glow rounded-3xl bg-white/5 p-6 text-left text-white transition hover:-translate-y-1"
+            className="card-glow rounded-3xl bg-white/5 p-5 text-left text-white transition hover:-translate-y-1 sm:p-6"
           >
             <p className="text-xs uppercase tracking-[0.35em] text-ink-400">LinkedIn</p>
             <p className="mt-4 text-lg font-semibold">ben-efron</p>
           </a>
-          <a href={contact.github} target="_blank" rel="noreferrer" className="card-glow rounded-3xl bg-white/5 p-6 text-left text-white transition hover:-translate-y-1">
+          <a href={contact.github} target="_blank" rel="noreferrer" className="card-glow rounded-3xl bg-white/5 p-5 text-left text-white transition hover:-translate-y-1 sm:p-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ink-400">GitHub</p>
             <p className="mt-4 text-lg font-semibold">github.com/benefron</p>
           </a>
