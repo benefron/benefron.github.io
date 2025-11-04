@@ -16,11 +16,11 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-white/10">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-        <Link href="#" className="font-display text-lg font-semibold tracking-wide text-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
+        <Link href="#" className="font-display text-base font-semibold tracking-wide text-white md:text-lg">
           Ben Efron
         </Link>
-        <nav className="hidden items-center gap-8 text-sm uppercase tracking-widest text-ink-200 md:flex">
+        <nav className="hidden items-center gap-6 text-xs uppercase tracking-wider text-ink-200 md:flex lg:gap-8 lg:text-sm">
           {navLinks.map((link) => (
             <a key={link.label} href={link.href} className="relative transition-colors hover:text-white">
               {link.label}
@@ -30,14 +30,14 @@ export function Header() {
         </nav>
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white"
+          className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white"
           aria-label="Toggle navigation"
         >
           <span className="sr-only">Toggle navigation</span>
           <div className="space-y-1">
-            <span className="block h-0.5 w-6 bg-white" />
-            <span className="block h-0.5 w-6 bg-white" />
-            <span className="block h-0.5 w-6 bg-white" />
+            <span className="block h-0.5 w-5 bg-white" />
+            <span className="block h-0.5 w-5 bg-white" />
+            <span className="block h-0.5 w-5 bg-white" />
           </div>
         </button>
       </div>
@@ -49,7 +49,7 @@ export function Header() {
             exit={{ height: 0, opacity: 0 }}
             className="border-t border-white/10 bg-slate-950/95 md:hidden"
           >
-            <div className="mx-auto flex max-w-6xl flex-col px-4 py-4 text-sm uppercase tracking-widest text-ink-200 sm:px-6">
+            <div className="mx-auto flex max-w-6xl flex-col px-4 py-3 text-xs uppercase tracking-wider text-ink-200">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
