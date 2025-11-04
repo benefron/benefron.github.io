@@ -16,11 +16,7 @@ export default function HomePage() {
           <h2>About</h2>
         </div>
         <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-200">
-          I am an experimental systems neuroscientist studying how neural populations encode information and how neuronal networks organize. My work integrates
-          neural recordings, behavioral measurements, and sensory context to reveal how circuits extract structure from the world. I&apos;m now extending
-          these principles toward bio-inspired sensing and computation, applying systems-level insight (pathway separation, adaptation, redundancy
-          reduction) to guide sensing and processing strategies in artificial systems. I enjoy collaborating across neuroscience, computation, and
-          engineering to turn biological understanding into practical system design.
+          I am an experimental systems neuroscientist studying how neural populations compute, adapt, and reorganize activity. My current work focuses on population dynamics, closed‑loop control, and translating biological computation into adaptive sensing and system design. I integrate large‑scale neural recordings, circuit perturbations, and analysis pipelines to understand how structure and dynamics shape computation. I collaborate across neuroscience, computation, and engineering to turn biological principles—such as pathway separation, temporal filtering, receptive field structure, labeled‑line encoding, and spatio‑temporal compression—into practical strategies for sensing, representation, and control.
         </p>
       </section>
       <section className="section" id="research">
@@ -32,33 +28,27 @@ export default function HomePage() {
           <div className="rounded-[calc(24px-1px)] border border-white/10 bg-slate-950/60 p-8 backdrop-blur">
             <div className="flex flex-col gap-10 lg:flex-row">
               <div className="space-y-6 lg:w-1/2">
-                <h3 className="text-2xl font-semibold text-white">Active Sensing Across Auditory and Somatosensory Cortices</h3>
+                <h3 className="text-2xl font-semibold text-white">Systems‑Level Neural Computation & Adaptive Circuit Dynamics</h3>
                 <p className="text-sm leading-relaxed text-ink-200">
-                  Doctoral research examine how whisker-generated sensory events are encoded during natural exploration, integrating neural,
-                  behavioral, and sensory data streams to follow information as it is used online.
+                  My current research focuses on how neural circuits compute, adapt, and reorganize activity patterns, and how these dynamics can be leveraged for closed‑loop control, algorithm design, and neuro‑inspired computation. This work integrates large‑scale neural recordings, circuit perturbations, and system‑level modeling to understand how structure and dynamics interact to shape computation.
                 </p>
                 <ul className="space-y-3 text-sm text-ink-200">
                   <li className="flex gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
                     <span>
-                      <strong className="font-semibold text-white">Neural Coding in Active Sensing.</strong> Investigating how neuronal populations encode
-                      sensory input during behavior by combining electrophysiology, whisker and auditory signals, and video tracking to understand how
-                      information is represented and used online.
+                      <strong className="font-semibold text-white">Neural Population Dynamics & Computation.</strong> Studying how population activity patterns emerge, stabilize, and adapt under different input conditions, and how these dynamics relate to coding, information flow, and computational flexibility.
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
                     <span>
-                      <strong className="font-semibold text-white">Bio-Inspired Sensing &amp; Computation.</strong> Exploring how pathway separation,
-                      adaptation, redundancy reduction, and context-dependent modulation can guide sensing and processing strategies in artificial systems.
+                      <strong className="font-semibold text-white">Bio-Inspired Sensing &amp; Computation.</strong> Applying systems‑level organizational principles—pathway separation, temporal filtering, receptive field structure, labeled‑line encoding, and spatio‑temporal compression—to inform adaptive sensing, representation learning, and efficient communication in artificial systems.
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
                     <span>
-                      <strong className="font-semibold text-white">Collaboration with imec.</strong> Serving as the coordination link between the
-                      Brain-Inspired Computing Lab and imec Life Science Technologies, refining recording systems and closed-loop experiment workflows and
-                      mentoring interns.
+                      <strong className="font-semibold text-white">Collaboration with imec.</strong> Providing biological insight to guide system‑level architecture in neuromorphic engineering and silicon–neural interfacing; working with imec teams on closed‑loop control, neural system optimization, and cross‑disciplinary algorithm development.
                     </span>
                   </li>
                 </ul>

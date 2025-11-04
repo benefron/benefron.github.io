@@ -1,53 +1,53 @@
 export const hero = {
   name: "Ben Efron, PhD",
-  title: "Systems Neuroscientist Neural Coding & Behavior Bio-Inspired Sensing & Adaptive Systems",
+  title: "Systems Neuroscientist | Neural Computation & Adaptive Dynamics | Bio-Inspired System Design",
   summary:
-    "I study how neural systems encode and act on sensory information in natural behavior, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
-  ctaPrimary: {
-    label: "Explore Research",
+    "I study how neural circuits compute and adapt, and translate these principles into strategies for sensing, representation, and closed-loop control. My work bridges population dynamics, biological computation, and the design of adaptive algorithms and systems.",  ctaPrimary: {
+    label: "See Research",
     href: "#research"
   },
   ctaSecondary: {
-    label: "View Publications",
+    label: "Publications",
     href: "#publications"
   }
 };
 
 export const stats = [
   { label: "Scope", value: "Neuroscience and tech" },
-  { label: "Vision", value: "Neuromorphic engineering and NeuroAI" },
+  { label: "Vision", value: "Biology-informed sensing and adaptive computation" },
   { label: "Tools", value: "Open Source & Automated Workflows" },
-  { label: "Experience", value: "7+ years Reserch, Experiments and data analysis" }
+  { label: "Experience", value: "7+ years research, experiments & data analysis" }
 ];
 
 export const focusAreas = [
   {
     title: "Systems Neuroscience",
-    description: "Studying how neural populations encode sensory information in ongoing behavior.",
+    description: "Studying how neural populations compute and adapt at the circuit level.",
     bullets: [
-      "Sensory coding in behavior",
-      "Active sensing & perception",
+      "Population dynamics & coding",
+      "Adaptation, context & modulation",
       "Circuit-level computation",
       "Systems-level reasoning"
     ]
   },
   {
     title: "Data & Modeling",
-    description: "Applying statistical and machine learning approaches to neural and sensory data.",
+    description:
+      "Analyzing multimodal neural, behavioral, and sensory data to uncover structure, encoding strategies, and system-level principles.",
     bullets: [
-      "Statistical inference",
-      "GLM, Classifiers, Regression, SSM",
-      "Neural & audio signal processing",
-      "Time-series alignment & decoding"
+      "Neural-behavioral decoding & representation analysis",
+      "Statistical inference & generative modeling (GLMs, Bayesian methods, bootstrapping)",
+      "Machine learning classifiers for population-level signal interpretation",
+      "Multimodal time-series alignment (neural, audio, kinematics, video)"
     ]
   },
   {
     title: "Experiment & Integration",
-    description: "Building complete complex experimental pipelines.",
+    description: "Building closed-loop and synchronized experimental pipelines.",
     bullets: [
       "Electrophysiology pipelines",
       "Multi-sensor synchronization",
-      "Automated behavioral experiments",
+      "Closed-loop experimentation & control",
       "Rapid prototyping (CAD, Arduino, Bonsai RX)"
     ]
   }
@@ -56,9 +56,9 @@ export const focusAreas = [
 export const timeline = [
   {
     year: "2024-Present",
-    label: "Postdoctoral Researcher, Brain-Inspired Computing Lab (University of Liege)",
+    label: "Postdoctoral Researcher, Brain-Inspired Computing Lab (University of Liège)",
     description:
-      "Experimental systems neuroscience and neural data analysis focused on active sensing. Coordinate with imec engineers to adapt recording and control systems for closed-loop experiments, mentor students and interns, and model and design Neuro-inspired algorithms."
+      "Experimental systems neuroscience and neural data analysis focusing on neural computation and adaptive dynamics. Coordinate with imec engineers to refine recording and closed-loop control systems, mentor students and interns, and translate biological principles into algorithm and system design."
   },
   {
     year: "2017-2024",
@@ -81,8 +81,7 @@ export const publications = [
     summary:
       "Efron, B., Ntelezos, A., Katz, Y., & Lampl, I. Neural encoding and behavioral detection of whisker-generated sounds in mice.",
     links: [
-      { label: "Paper", href: "https://www.sciencedirect.com/science/article/pii/S0960982225001241" },
-      { label: "Media", href: "https://neurosciencenews.com/whiskers-sensory-neuroscience-29134/" }
+      { label: "Paper", href: "https://www.sciencedirect.com/science/article/pii/S0960982225001241" }
     ]
   },
   {
@@ -109,15 +108,15 @@ export const publications = [
 export const skills = [
   {
     title: "Systems Neuroscience",
-    items: ["Sensory coding in behavior", "Active sensing & perception", "Circuit-level computation", "Systems-level reasoning"]
+    items: ["Population dynamics & coding", "Adaptation & context modulation", "Circuit-level computation", "Systems-level reasoning"]
   },
   {
     title: "Data & Modeling",
-    items: ["Statistical inference & GLMs", "Machine learning classifiers", "Neural & audio signal processing", "Time-series alignment & decoding"]
+    items: ["Neural-behavioral decoding & representation analysis", "Statistical inference & GLMs", "Machine learning classifiers", "Time-series alignment & decoding"]
   },
   {
     title: "Experiment & Integration",
-    items: ["Electrophysiology pipelines", "Multi-sensor synchronization", "Automated behavioral experiments", "Rapid prototyping (CAD, Arduino, Bonsai RX)"]
+    items: ["Electrophysiology pipelines", "Multi-sensor synchronization", "Closed-loop experimentation & control", "Rapid prototyping (CAD, Arduino, Bonsai RX)"]
   }
 ];
 
