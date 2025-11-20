@@ -27,9 +27,9 @@ export function Hero() {
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms]">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-cool-100 to-cool-400">
-                  Decoding
+                  Brain
                 </span>
-                <span className="block mt-2">Neural Dynamics</span>
+                <span className="block mt-2">Inspired Tech</span>
               </h1>
 
               <p className="text-lg md:text-xl text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:400ms]">
