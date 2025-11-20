@@ -10,18 +10,12 @@ export function About() {
                         <div className="absolute -inset-4 bg-gradient-to-r from-ice-500/20 to-fire-500/20 rounded-[2rem] blur-2xl" />
                         <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
                             <div className="aspect-[4/3] relative">
-                                {/* Placeholder for research image */}
-                                <div className="absolute inset-0 bg-cool-800 flex items-center justify-center">
-                                    <span className="text-cool-500 uppercase tracking-widest text-sm">Research Visualization</span>
-                                </div>
-                                {/* Uncomment when image is available
-                <Image
-                  src="/images/chipImage.jpeg"
-                  alt="Neural Computation"
-                  fill
-                  className="object-cover"
-                />
-                */}
+                                <Image
+                                    src="/images/sensory_bio_to_tech.png"
+                                    alt="Biological Sensing to Adaptive Control"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                             <div className="p-6 md:p-8 space-y-4">
                                 <div className="flex items-center gap-4">
@@ -49,7 +43,7 @@ export function About() {
                                 I work at the intersection of systems neuroscience, computational modeling, and engineering. My research focuses on how neural populations compute, adapt, and reorganize, translating these biological principles into robust strategies for sensing and closed-loop control.
                             </p>
                             <p>
-                                I integrate large‑scale neural recordings, circuit perturbations, and analysis pipelines to understand how structure and dynamics shape computation. By combining experimental insights with computational theory, I aim to uncover the fundamental rules of neural adaptation and apply them to build smarter, more resilient systems.
+                                I integrate large‑scale neural recordings, circuit perturbations, and analysis pipelines to understand how structure and dynamics shape computation. By combining experimental insights with computational theory, I aim to explore how neuronal systems can inform us about the design principles of adaptive systems and apply them to build smarter, more resilient systems.
                             </p>
                         </div>
 
