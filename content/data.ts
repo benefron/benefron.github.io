@@ -68,7 +68,7 @@ export const timeline = [
   },
   {
     year: "2013-2016",
-    label: "BSc Psychobiology (Cum Laude), Hebrew University + University of Melbourne Exchange",
+    label: "BSc Psychobiology (Magna cum Laude), Hebrew University + University of Melbourne Exchange",
     description:
       "Excellence program integrating biology, neuroscience, and psychology. Melbourne exchange at the Palmer Lab focused on designing autonomous behavioral experiments and conducting neural and behavioral studies."
   }
