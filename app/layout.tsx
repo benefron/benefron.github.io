@@ -11,11 +11,11 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700
 export const metadata: Metadata = {
   title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems — Ben Efron",
   description:
-    "I study how neural systems encode and act on sensory information in natural behavior, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
+    "I study how neural systems encode and act on sensory information, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
   openGraph: {
     title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems — Ben Efron",
     description:
-      "I study how neural systems encode and act on sensory information in natural behavior, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
+      "I study how neural systems encode and act on sensory information, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
     url: "https://benefron.github.io",
     siteName: "Ben Efron",
     locale: "en_US",
