@@ -9,35 +9,80 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: "#f5f5ff",
-          100: "#ebe9ff",
-          200: "#d4cfff",
-          300: "#b3a5ff",
-          400: "#8a6cff",
-          500: "#6b46ff",
-          600: "#5935db",
-          700: "#4528b5",
-          800: "#35208c",
-          900: "#2b1c6f"
+        // Cool (Slate/Dark Blue)
+        cool: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+          950: "#020617",
         },
-        accent: "#facc15",
-        ink: {
-          100: "#f9fafb",
-          200: "#f3f4f6",
-          300: "#e5e7eb",
-          400: "#d1d5db",
-          500: "#9ca3af",
-          600: "#6b7280",
-          700: "#4b5563",
-          800: "#1f2937",
-          900: "#111827"
+        // Ice (Cool Accent - Cyan/Teal)
+        ice: {
+          400: "#22d3ee", // Cyan 400
+          500: "#06b6d4", // Cyan 500
+          600: "#0891b2", // Cyan 600
+        },
+        // Fire (Warm Accent - Orange/Amber)
+        fire: {
+          400: "#fb923c", // Orange 400
+          500: "#f97316", // Orange 500
+          600: "#ea580c", // Orange 600
+        },
+        brand: { // Mapping brand to cool
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+        },
+        accent: "#22d3ee", // Updated to Ice
+        ink: { // Mapping ink to cool
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
         }
       },
       fontFamily: {
-        display: ["Poppins", "var(--font-sans)"],
-        body: ["Inter", "var(--font-sans)"]
-      }
+        display: ["Poppins", "var(--font-sans)", "sans-serif"],
+        body: ["Inter", "var(--font-sans)", "sans-serif"]
+      },
+      backgroundImage: {
+        'storm-gradient': 'linear-gradient(to bottom right, #0f172a, #1e293b)',
+        'glass-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     }
   },
   plugins: []

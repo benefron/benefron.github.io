@@ -8,20 +8,25 @@
 
 body {
   font-family: theme("fontFamily.body");
-  background: radial-gradient(circle at top left, rgba(107, 70, 255, 0.18), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(234, 179, 8, 0.12), transparent 50%),
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.15), transparent 40%),
+    /* Ice (Cyan) */
+    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.1), transparent 40%),
+    /* Fire (Orange) */
     #0f172a;
-  color: theme("colors.ink.100");
+  /* Cool 900 */
+  color: theme("colors.cool.100");
   overflow-x: hidden;
 }
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @layer base {
   h1 {
-    @apply font-display text-4xl md:text-5xl font-semibold text-white tracking-tight;
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight;
   }
 
   h2 {
@@ -33,7 +38,8 @@ html {
   }
 
   p {
-    @apply text-ink-200;
+    @apply leading-relaxed;
+    color: theme('colors.cool.300');
   }
 
   main {
@@ -43,15 +49,20 @@ html {
 
 @layer components {
   .section {
-    @apply mx-auto max-w-6xl space-y-6 md:space-y-8;
+    @apply mx-auto max-w-6xl space-y-12 md:space-y-24 py-12 md:py-24;
   }
 
   .section-heading {
-    @apply space-y-2 md:space-y-4;
+    @apply space-y-4 mb-8 md:mb-12;
   }
 
   .section-subtitle {
-    @apply text-xs uppercase tracking-[0.35em] text-ink-400 md:text-sm;
+    @apply text-xs uppercase tracking-[0.35em] font-semibold md:text-sm;
+    color: theme('colors.ice.400');
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
 }
 
@@ -62,31 +73,33 @@ html {
 .gradient-ring::before {
   content: "";
   position: absolute;
-  inset: -2px;
+  inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(120deg, rgba(107, 70, 255, 0.6), rgba(234, 179, 8, 0.6));
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.5), rgba(249, 115, 22, 0.5));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   pointer-events: none;
 }
 
 .card-glow {
   position: relative;
   isolation: isolate;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-glow::after {
   content: "";
   position: absolute;
-  inset: 10px;
-  border-radius: 20px;
-  background: radial-gradient(circle, rgba(107, 70, 255, 0.15), transparent 65%);
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
   opacity: 0;
-  transition: opacity 200ms ease;
+  transition: opacity 0.5s;
   z-index: -1;
+  pointer-events: none;
 }
 
 .card-glow:hover::after {
@@ -104,6 +117,7 @@ html {
 }
 
 @media (max-width: 1024px) {
+
   .timeline-left,
   .timeline-right {
     margin-left: auto;

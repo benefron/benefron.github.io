@@ -2,27 +2,27 @@ import { contact } from "@/content/data";
 
 export function Footer() {
   return (
-    <footer id="contact" className="border-t border-white/10 bg-slate-950/60">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 md:flex-row md:items-center md:justify-between md:gap-6 md:px-6 md:py-12">
-        <div>
-          <p className="font-display text-base text-white md:text-lg">Let&apos;s collaborate</p>
-          <p className="mt-2 max-w-md text-xs text-ink-300 md:text-sm">
-            I&apos;m interested in systems neuroscience collaborations, neural coding projects, and bio-inspired sensing strategies. Reach out for opportunities to connect experiments with computation.
-          </p>
+    <footer className="border-t border-white/5 bg-cool-950 py-12 md:py-16">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="text-center md:text-left">
+          <p className="font-display text-lg font-semibold text-white">Ben Efron</p>
+          <p className="text-sm text-cool-400 mt-1">Systems Neuroscience & Neural Computation</p>
         </div>
-        <div className="flex flex-col gap-1.5 text-xs text-ink-200 md:gap-2 md:text-right md:text-sm">
-          <a href={`mailto:${contact.email}`} className="transition-colors hover:text-white">
-            {contact.email}
+
+        <div className="flex items-center gap-6">
+          <a href={`mailto:${contact.email}`} className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
+            Email
           </a>
-          <a href={contact.linkedin} className="transition-colors hover:text-white" target="_blank" rel="noreferrer">
+          <a href={contact.linkedin} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
             LinkedIn
           </a>
-          <a href={contact.github} className="transition-colors hover:text-white" target="_blank" rel="noreferrer">
+          <a href={contact.github} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
             GitHub
           </a>
-          <a href={contact.resume} className="transition-colors hover:text-white" target="_blank" rel="noreferrer">
-            Download CV
-          </a>
+        </div>
+
+        <div className="text-xs text-cool-600 md:text-right">
+          &copy; {new Date().getFullYear()} Ben Efron. All rights reserved.
         </div>
       </div>
     </footer>

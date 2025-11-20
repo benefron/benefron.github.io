@@ -2,10 +2,10 @@ export const hero = {
   name: "Ben Efron, PhD",
   title: "Systems Neuroscientist | Neural Computation & Adaptive Dynamics | Bio-Inspired System Design",
   summary:
-    "I study how neural circuits compute and adapt, and translate these principles into strategies for sensing, representation, and closed-loop control. My work bridges population dynamics, biological computation, and the design of adaptive algorithms and systems.",  ctaPrimary: {
-    label: "See Research",
-    href: "#research"
-  },
+    "I study how neural circuits compute and adapt, and translate these principles into strategies for sensing, representation, and closed-loop control. My work bridges population dynamics, biological computation, and the design of adaptive algorithms and systems.", ctaPrimary: {
+      label: "See Research",
+      href: "#research"
+    },
   ctaSecondary: {
     label: "Publications",
     href: "#publications"
@@ -13,10 +13,10 @@ export const hero = {
 };
 
 export const stats = [
-  { label: "Scope", value: "Neuroscience and tech" },
-  { label: "Vision", value: "Biology-informed sensing and adaptive computation" },
-  { label: "Tools", value: "Open Source & Automated Workflows" },
-  { label: "Experience", value: "7+ years research, experiments & data analysis" }
+  { label: "Scope", value: "Neuroscience & Tech" },
+  { label: "Vision", value: "Biology-Informed" },
+  { label: "Tools", value: "Open Source" },
+  { label: "Experience", value: "7+ Years" }
 ];
 
 export const focusAreas = [
