@@ -45,10 +45,10 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="relative text-sm font-medium uppercase tracking-wider text-cool-300 transition-colors hover:text-white group"
+              className="relative text-sm font-medium uppercase tracking-wider text-cool-300 transition-colors hover:text-white group hover-glow"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-ice-400 transition-all duration-300 ease-out group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gradient-to-r from-electric-400 to-ice-400 transition-all duration-300 ease-out group-hover:w-full" />
             </a>
           ))}
         </nav>
@@ -79,7 +79,7 @@ export function Header() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-lg font-medium text-cool-200 hover:text-ice-400 transition-colors"
+                  className="text-lg font-medium text-cool-200 hover:text-ice-400 transition-colors hover-glow"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}

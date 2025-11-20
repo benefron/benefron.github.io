@@ -10,13 +10,13 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href={`mailto:${contact.email}`} className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
+          <a href={`mailto:${contact.email}`} className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider hover-underline-electric">
             Email
           </a>
-          <a href={contact.linkedin} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
+          <a href={contact.linkedin} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider hover-underline-electric">
             LinkedIn
           </a>
-          <a href={contact.github} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider">
+          <a href={contact.github} target="_blank" rel="noreferrer" className="text-cool-400 hover:text-ice-400 transition-colors text-sm font-medium uppercase tracking-wider hover-underline-electric">
             GitHub
           </a>
         </div>

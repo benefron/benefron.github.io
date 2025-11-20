@@ -5,6 +5,7 @@ import { Timeline } from "@/components/Timeline";
 import { Publications } from "@/components/Publications";
 import { SkillColumns } from "@/components/SkillColumns";
 import { MediaHighlights } from "@/components/MediaHighlights";
+import { SectionDivider, GeometricDivider } from "@/components/SectionDivider";
 import { contact } from "@/content/data";
 
 export default function HomePage() {
@@ -16,6 +17,8 @@ export default function HomePage() {
       <div className="bg-surface-200 border-y border-white/5">
         <About />
       </div>
+
+      <SectionDivider />
 
       {/* Research Section - Base Background */}
       <section className="section relative" id="research">
@@ -30,6 +33,8 @@ export default function HomePage() {
           <FocusGrid />
         </div>
       </section>
+
+      <GeometricDivider />
 
       {/* Timeline Section - Darker Background */}
       <div className="bg-surface-200 border-y border-white/5">

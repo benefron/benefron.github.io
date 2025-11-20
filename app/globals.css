@@ -124,3 +124,43 @@ html {
     margin-right: auto;
   }
 }
+
+/* Enhanced Hover Effects */
+@layer utilities {
+  .hover-glow {
+    @apply transition-all duration-300;
+    position: relative;
+  }
+
+  .hover-glow:hover {
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.5), 0 0 16px rgba(139, 92, 246, 0.3);
+  }
+
+  .hover-underline-electric {
+    @apply relative transition-colors duration-300;
+  }
+
+  .hover-underline-electric::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a78bfa, #22d3ee);
+    transition: width 0.3s ease;
+  }
+
+  .hover-underline-electric:hover::after {
+    width: 100%;
+  }
+
+  .interactive-glow {
+    @apply transition-all duration-300;
+  }
+
+  .interactive-glow:hover {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+  }
+}
