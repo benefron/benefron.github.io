@@ -1,5 +1,5 @@
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
+import { About } from "@/components/AboutSection";
 import { FocusGrid } from "@/components/FocusGrid";
 import { Timeline } from "@/components/Timeline";
 import { Publications } from "@/components/Publications";
