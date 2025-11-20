@@ -25,7 +25,7 @@ export function Hero() {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-[1.1]">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-electric-300 to-electric-500">
                   Exploring Neural Coding
                 </span>

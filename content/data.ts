@@ -21,34 +21,33 @@ export const stats = [
 
 export const focusAreas = [
   {
-    title: "Systems Neuroscience",
-    description: "Studying how neural populations compute and adapt at the circuit level.",
+    title: "Neural Computation & Adaptive Dynamics",
+    description: "Leading experimental work studying how neuronal populations process information and adapt in real-time.",
     bullets: [
-      "Population dynamics & coding",
-      "Adaptation, context & modulation",
-      "Circuit-level computation",
-      "Systems-level reasoning"
+      "High-density microelectrode array (HD-MEA) recordings from cell cultures",
+      "Population-level activity patterns and information encoding",
+      "Real-time closed-loop control and feedback systems",
+      "Bridging biological insights with computational frameworks"
     ]
   },
   {
-    title: "Data & Modeling",
-    description:
-      "Analyzing multimodal neural, behavioral, and sensory data to uncover structure, encoding strategies, and system-level principles.",
+    title: "Neuroengineering & Hardware Integration",
+    description: "Developing and adapting software for experiment management, data acquisition, and synchronized multi-sensor systems.",
     bullets: [
-      "Neural-behavioral decoding & representation analysis",
-      "Statistical inference & generative modeling (GLMs, Bayesian methods, bootstrapping)",
-      "Machine learning classifiers for population-level signal interpretation",
-      "Multimodal time-series alignment (neural, audio, kinematics, video)"
+      "imec HD-MEA system integration and workflow optimization",
+      "Open Ephys integration for closed-loop experiments",
+      "Collaboration with imec engineering team on neuroscience-focused improvements",
+      "Hardware-software co-design for real-time neural interfaces"
     ]
   },
   {
-    title: "Experiment & Integration",
-    description: "Building closed-loop and synchronized experimental pipelines.",
+    title: "Neuromorphic Computing & Bio-Inspired AI",
+    description: "Translating biological principles into neuromorphic hardware and robotic systems through collaborative projects.",
     bullets: [
-      "Electrophysiology pipelines",
-      "Multi-sensor synchronization",
-      "Closed-loop experimentation & control",
-      "Rapid prototyping (CAD, Arduino, Bonsai RX)"
+      "NEMODAI project: connecting neural recordings to neuromorphic and robotic systems",
+      "Primary link between imec, VUB Brubotics, and University of Liège",
+      "Biologically inspired framework for sensory processing and abstraction",
+      "Designing algorithms with future neuromorphic implementation in mind"
     ]
   }
 ];

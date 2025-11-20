@@ -61,16 +61,16 @@ export function About() {
                         {/* Impact Metrics */}
                         <div className="pt-8 border-t border-white/5 grid grid-cols-3 gap-4">
                             <div>
-                                <p className="text-2xl font-bold text-white">5+</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Years Research</p>
+                                <p className="text-2xl font-bold text-white">7+</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Years Experience</p>
                             </div>
                             <div>
-                                <p className="text-2xl font-bold text-white">10+</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Publications</p>
+                                <p className="text-2xl font-bold text-white">PhD</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Systems Neuroscience</p>
                             </div>
                             <div>
-                                <p className="text-2xl font-bold text-white">2</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Languages</p>
+                                <p className="text-2xl font-bold text-white">3</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Partner Institutes</p>
                             </div>
                         </div>
                     </div>
