@@ -35,6 +35,20 @@ const config: Config = {
           500: "#f97316", // Orange 500
           600: "#ea580c", // Orange 600
         },
+        // Electric (Deep Accent - Violet/Indigo)
+        electric: {
+          400: "#a78bfa", // Violet 400
+          500: "#8b5cf6", // Violet 500
+          600: "#7c3aed", // Violet 600
+          900: "#4c1d95", // Violet 900
+        },
+        // Surface (Alternating backgrounds)
+        surface: {
+          50: "#f8fafc",
+          100: "#1e293b", // Slate 800
+          200: "#0f172a", // Slate 900
+          300: "#020617", // Slate 950
+        },
         brand: { // Mapping brand to cool
           50: "#f8fafc",
           100: "#f1f5f9",

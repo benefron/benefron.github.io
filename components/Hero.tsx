@@ -25,56 +25,65 @@ export function Hero() {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms]">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-cool-100 to-cool-400">
-                  Brain
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-[1.1]">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-electric-300 to-electric-500">
+                  Exploring Neural Coding
                 </span>
-                <span className="block mt-2">Inspired Tech</span>
+                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-400 to-ice-400">
+                  for Next-Gen Sensing
+                </span>
+                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-ice-400 to-cool-300">
+                  & Adaptive Systems
+                </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:400ms]">
+              <p className="text-lg md:text-xl text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:400ms] font-medium">
+                &ldquo;Bridging the gap between biological intelligence and artificial systems.&rdquo;
+              </p>
+              <p className="text-lg text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:500ms]">
                 {hero.summary}
               </p>
             </div>
-
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 animate-slide-up [animation-delay:600ms]">
-              <Link
-                href={hero.ctaPrimary.href}
-                className="group relative px-8 py-4 rounded-full bg-white text-cool-950 font-semibold tracking-wide overflow-hidden transition-transform hover:scale-105"
-              >
-                <span className="relative z-10">{hero.ctaPrimary.label}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-ice-400 to-fire-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-              </Link>
-
-              <Link
-                href={hero.ctaSecondary.href}
-                className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium tracking-wide backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
-              >
-                {hero.ctaSecondary.label}
-              </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/5 animate-slide-up [animation-delay:800ms]">
-              {stats.map((item) => (
-                <div key={item.label} className="text-center lg:text-left">
-                  <p className="text-xl md:text-2xl font-bold text-white leading-tight">{item.value}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-cool-400 mt-1">{item.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Visual/Headshot */}
-          <div className="lg:w-1/3 relative animate-fade-in [animation-delay:400ms]">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
-              <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm">
-                {/* Placeholder for headshot - User said they are waiting for one */}
-                <div className="absolute inset-0 flex items-center justify-center text-cool-500">
-                  <span className="text-sm uppercase tracking-widest">Headshot Coming Soon</span>
-                </div>
-                {/* Uncomment when image is available
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 animate-slide-up [animation-delay:600ms]">
+            <Link
+              href={hero.ctaPrimary.href}
+              className="group relative px-8 py-4 rounded-full bg-white text-cool-950 font-semibold tracking-wide overflow-hidden transition-transform hover:scale-105"
+            >
+              <span className="relative z-10">{hero.ctaPrimary.label}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-ice-400 to-fire-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            </Link>
+
+            <Link
+              href={hero.ctaSecondary.href}
+              className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium tracking-wide backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
+            >
+              {hero.ctaSecondary.label}
+            </Link>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/5 animate-slide-up [animation-delay:800ms]">
+            {stats.map((item) => (
+              <div key={item.label} className="text-center lg:text-left">
+                <p className="text-xl md:text-2xl font-bold text-white leading-tight">{item.value}</p>
+                <p className="text-[10px] uppercase tracking-wider text-cool-400 mt-1">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Visual/Headshot */}
+        <div className="lg:w-1/3 relative animate-fade-in [animation-delay:400ms]">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
+            <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm">
+              {/* Placeholder for headshot - User said they are waiting for one */}
+              <div className="absolute inset-0 flex items-center justify-center text-cool-500">
+                <span className="text-sm uppercase tracking-widest">Headshot Coming Soon</span>
+              </div>
+              {/* Uncomment when image is available
                 <Image
                   src="/images/headshot.jpg"
                   alt="Ben Efron"
@@ -83,15 +92,14 @@ export function Hero() {
                   priority
                 />
                 */}
-              </div>
+            </div>
 
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 p-4 rounded-2xl bg-cool-900/80 backdrop-blur-md border border-white/10 shadow-xl animate-bounce-slow">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-ice-400 to-ice-600 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 p-4 rounded-2xl bg-cool-900/80 backdrop-blur-md border border-white/10 shadow-xl animate-bounce-slow">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-ice-400 to-ice-600 flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
             </div>
           </div>

@@ -40,25 +40,38 @@ export function About() {
 
                         <div className="space-y-6 text-cool-300 leading-relaxed">
                             <p>
-                                I work at the intersection of systems neuroscience, computational modeling, and engineering. My research focuses on how neural populations compute, adapt, and reorganize, translating these biological principles into robust strategies for sensing and closed-loop control.
-                            </p>
-                            <p>
-                                I integrate large‑scale neural recordings, circuit perturbations, and analysis pipelines to understand how structure and dynamics shape computation. By combining experimental insights with computational theory, I aim to explore how neuronal systems can inform us about the design principles of adaptive systems and apply them to build smarter, more resilient systems.
+                                I’m a systems neuroscientist working at the intersection of brain-inspired tech and adaptive computation. My current research at the University of Liège focuses on decoding neural circuits and turning biological insights into smarter sensing and control systems. I enjoy bridging experimental work with computational modeling and engineering—pushing new boundaries in how artificial and natural systems learn, adapt, and sense their worlds.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 pt-4">
+                        <div className="grid grid-cols-2 gap-3 pt-4">
                             {[
                                 "Neural Dynamics",
-                                "Closed-loop Control",
-                                "Adaptive Sensing",
-                                "System Design"
+                                "Adaptive Control",
+                                "Smart Sensing",
+                                "Bio-Engineering"
                             ].map((item) => (
-                                <div key={item} className="flex items-center gap-3">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-ice-400" />
+                                <div key={item} className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-electric-400" />
                                     <span className="text-sm font-medium text-cool-200">{item}</span>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Impact Metrics */}
+                        <div className="pt-8 border-t border-white/5 grid grid-cols-3 gap-4">
+                            <div>
+                                <p className="text-2xl font-bold text-white">5+</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Years Research</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-white">10+</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Publications</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-white">2</p>
+                                <p className="text-xs text-cool-400 uppercase tracking-wider">Languages</p>
+                            </div>
                         </div>
                     </div>
                 </div>
