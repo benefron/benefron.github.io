@@ -45,7 +45,7 @@ export const focusAreas = [
     description: "Translating biological principles into neuromorphic hardware and robotic systems through collaborative projects.",
     bullets: [
       "NEMODAI project: connecting neural recordings to neuromorphic and robotic systems",
-      "Primary link between imec, VUB Brubotics, and University of Liège",
+      "Primary communication link between imec and University of Liège",
       "Biologically inspired framework for sensory processing and abstraction",
       "Designing algorithms with future neuromorphic implementation in mind"
     ]
