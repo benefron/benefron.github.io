@@ -123,7 +123,7 @@ export const contact = {
   email: "benefron@gmail.com",
   linkedin: "https://www.linkedin.com/in/ben-efron-b19256b2/",
   github: "https://github.com/benefron",
-  resume: "/documents/Profile%20(5).pdf"
+  resume: "/documents/CV.pdf"
 };
 
 export const mediaFeatures = [
