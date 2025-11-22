@@ -11,8 +11,8 @@ export function About() {
                         <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
                             <div className="aspect-[4/3] relative">
                                 <Image
-                                    src="/images/sensory_bio_to_tech.png"
-                                    alt="Biological Sensing to Adaptive Control"
+                                    src="/images/neural_reconstruction.png"
+                                    alt="Neural Reconstruction Analysis"
                                     fill
                                     className="object-cover"
                                 />

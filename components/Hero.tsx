@@ -91,7 +91,7 @@ export function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
               <div className="relative w-full h-full rounded-full border border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm group">
                 <Image
-                  src="/images/headshot.jpg"
+                  src="/images/headshot_blended.png"
                   alt="Ben Efron"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
