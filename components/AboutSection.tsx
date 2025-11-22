@@ -11,10 +11,10 @@ export function About() {
                         <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
                             <div className="aspect-[3/4] relative">
                                 <Image
-                                    src="/images/about_combined.png"
+                                    src="/images/combined.png"
                                     alt="Neural Reconstruction Analysis"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                 />
                             </div>
                             <div className="p-6 md:p-8 space-y-4">
