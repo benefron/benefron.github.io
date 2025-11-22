@@ -39,7 +39,7 @@ export function About() {
 
                         <div className="space-y-6 text-cool-300 leading-relaxed">
                             <p>
-                                I’m a systems neuroscientist working at the intersection of brain-inspired tech and adaptive computation. My current research at the University of Liège focuses on decoding neural circuits and turning biological insights into smarter sensing and control systems. I enjoy bridging experimental work with computational modeling and engineering—pushing new boundaries in how artificial and natural systems learn, adapt, and sense their worlds.
+                                I’m a systems neuroscientist working at the intersection of brain-inspired tech and adaptive computation. My current research at the University of Liège focuses on decoding neural circuits and turning biological insights into smarter sensing and control systems. I enjoy bridging experimental work with computational modeling and engineering, pushing new boundaries in how artificial and natural systems learn, adapt, and sense their worlds.
                             </p>
                         </div>
 
