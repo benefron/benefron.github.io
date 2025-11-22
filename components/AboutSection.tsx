@@ -9,9 +9,9 @@ export function About() {
                     <div className="relative order-2 lg:order-1">
                         <div className="absolute -inset-4 bg-gradient-to-r from-ice-500/20 to-fire-500/20 rounded-[2rem] blur-2xl" />
                         <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
-                            <div className="aspect-[4/3] relative">
+                            <div className="aspect-[3/4] relative">
                                 <Image
-                                    src="/images/neural_reconstruction.png"
+                                    src="/images/about_combined.png"
                                     alt="Neural Reconstruction Analysis"
                                     fill
                                     className="object-cover"
