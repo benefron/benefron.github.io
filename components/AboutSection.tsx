@@ -9,14 +9,13 @@ export function About() {
                     <div className="relative order-2 lg:order-1">
                         <div className="absolute -inset-4 bg-gradient-to-r from-ice-500/20 to-fire-500/20 rounded-[2rem] blur-2xl" />
                         <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
-                            <div className="aspect-[3/4] relative">
-                                <Image
-                                    src="/images/combined.png"
-                                    alt="Neural Reconstruction Analysis"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
+                            <Image
+                                src="/images/combined.png"
+                                alt="Neural Reconstruction Analysis"
+                                width={3529}
+                                height={2475}
+                                className="w-full h-auto"
+                            />
                             <div className="p-6 md:p-8 space-y-4">
                                 <div className="flex items-center gap-4">
                                     <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
