@@ -90,11 +90,6 @@ export function Hero() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
               <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm">
-                {/* Placeholder for headshot - User said they are waiting for one */}
-                <div className="absolute inset-0 flex items-center justify-center text-cool-500">
-                  <span className="text-sm uppercase tracking-widest">Headshot Coming Soon</span>
-                </div>
-                {/* Uncomment when image is available
                 <Image
                   src="/images/headshot.jpg"
                   alt="Ben Efron"
@@ -102,7 +97,6 @@ export function Hero() {
                   className="object-cover"
                   priority
                 />
-                */}
               </div>
 
               {/* Floating Elements */}
