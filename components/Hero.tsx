@@ -25,14 +25,14 @@ export function Hero() {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-[1.1]">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-electric-300 to-electric-500">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-tight">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-electric-300 to-electric-500 pb-2">
                   Exploring Neural Coding
                 </span>
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-400 to-ice-400">
+                <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-electric-400 to-ice-400 pb-2">
                   for Next-Gen Sensing
                 </span>
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-ice-400 to-cool-300">
+                <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-ice-400 to-cool-300 pb-2">
                   & Adaptive Systems
                 </span>
               </h1>
@@ -89,14 +89,17 @@ export function Hero() {
           <div className="lg:w-1/3 relative animate-fade-in [animation-delay:400ms]">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
-              <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm">
+              <div className="relative w-full h-full rounded-full border border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm group">
                 <Image
                   src="/images/headshot.jpg"
                   alt="Ben Efron"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority
                 />
+                {/* Gradient Overlay for better blending */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-cool-950/40 via-transparent to-electric-500/10 mix-blend-overlay" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full" />
               </div>
 
               {/* Floating Elements */}
