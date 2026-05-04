@@ -2,43 +2,40 @@ import { skills } from "@/content/data";
 
 export function SkillColumns() {
   return (
-    <section className="section" id="skills">
-      <div className="section-heading text-center">
-        <p className="section-subtitle">Expertise</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Technical Range</h2>
-        <p className="text-cool-300 max-w-2xl mx-auto mt-4">
-          Systems neuroscience, quantitative modeling, and integrated experimentation.
-        </p>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-3">
-        {skills.map((group, index) => (
-          <article
-            key={group.title}
-            className="group relative p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/10 hover:border-white/20"
+    <section className="border-t border-ink/10" id="skills">
+      <div className="max-w-[1100px] mx-auto px-10 py-[100px]">
+        {/* Section header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-[10px] mb-3">
+            <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">Expertise</span>
+            <span className="flex-1 max-w-[60px] h-px bg-ink/10" />
+          </div>
+          <h2
+            className="font-display leading-[1.1] tracking-[-0.02em] text-ink"
+            style={{ fontSize: "clamp(36px, 3.5vw, 56px)" }}
           >
-            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${index === 0 ? 'from-ice-400 to-ice-600' :
-              index === 1 ? 'from-fire-400 to-fire-600' :
-                'from-cool-400 to-cool-600'
-              } opacity-50 group-hover:opacity-100 transition-opacity`} />
+            Technical Range
+          </h2>
+        </div>
 
-            <h3 className="text-lg font-bold text-white mb-6 group-hover:text-ice-200 transition-colors">
-              {group.title}
-            </h3>
-
-            <ul className="space-y-3">
-              {group.items.map((skill) => (
-                <li key={skill} className="flex items-center gap-3 text-sm text-cool-300">
-                  <div className={`w-1.5 h-1.5 rounded-full ${index === 0 ? 'bg-ice-400' :
-                    index === 1 ? 'bg-fire-400' :
-                      'bg-cool-400'
-                    }`} />
-                  <span>{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {/* Cards grid */}
+        <div className="border border-ink/10 rounded-[6px] overflow-hidden grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ink/10">
+          {skills.map((group) => (
+            <div key={group.title} className="p-9">
+              <h3 className="font-display text-[20px] text-ink mb-5">{group.title}</h3>
+              <ul>
+                {group.items.map((skill, i) => (
+                  <li
+                    key={skill}
+                    className={`font-body text-[14px] text-ink-mid py-[9px] leading-[1.4] ${i < group.items.length - 1 ? "border-b border-ink/10" : ""}`}
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

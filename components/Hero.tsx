@@ -1,119 +1,87 @@
-import { hero, stats } from "@/content/data";
-import Link from "next/link";
-import Image from "next/image";
+import { hero } from "@/content/data";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20" id="hero">
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-ice-500/20 rounded-full blur-[120px] animate-pulse-slow" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fire-500/10 rounded-full blur-[120px] animate-pulse-slow delay-1000" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
-      </div>
+    <section
+      className="grid grid-cols-1 lg:grid-cols-2 pt-[60px]"
+      style={{ minHeight: "100vh" }}
+      id="hero"
+    >
+      {/* Left column — text */}
+      <div className="flex flex-col justify-center px-6 py-16 lg:pl-20 lg:pr-16 lg:py-20 border-b lg:border-b-0 lg:border-r border-ink/10">
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="block w-8 h-px bg-[var(--accent)]" />
+          <span className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--accent)]">
+            Systems Neuroscientist
+          </span>
+        </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        {/* Name */}
+        <h1
+          className="font-display leading-none tracking-[-0.02em] text-ink mb-2"
+          style={{ fontSize: "clamp(52px, 5.5vw, 80px)" }}
+        >
+          Ben Efron,<br />
+          <em className="text-ink-mid">PhD</em>
+        </h1>
 
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left space-y-8 max-w-2xl">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0 w-fit animate-fade-in">
-                <span className="w-2 h-2 rounded-full bg-ice-400 animate-pulse" />
-                <span className="text-xs font-medium tracking-widest uppercase text-cool-300">
-                  Systems Neuroscientist
-                </span>
-              </div>
+        {/* Title line */}
+        <p className="font-body text-[14px] font-normal uppercase tracking-[0.06em] text-ink-muted leading-[1.8] mb-9">
+          Neural Computation · Adaptive Dynamics · Bio-Inspired Design
+        </p>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white animate-slide-up [animation-delay:200ms] leading-tight">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-electric-300 to-electric-500 pb-2">
-                  Exploring Neural Coding
-                </span>
-                <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-electric-400 to-ice-400 pb-2">
-                  for Next-Gen Sensing
-                </span>
-                <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-ice-400 to-cool-300 pb-2">
-                  & Adaptive Systems
-                </span>
-              </h1>
+        {/* Summary */}
+        <p
+          className="font-body text-[17px] leading-[1.75] text-ink-mid max-w-[480px] border-l-2 border-[var(--accent)] pl-5 mb-12"
+        >
+          I study how neural circuits compute and adapt, translating these principles
+          into strategies for{" "}
+          <strong>sensing, representation, and closed-loop control.</strong>
+        </p>
 
-              <p className="text-lg md:text-xl text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:400ms] font-medium">
-                &ldquo;Bridging the gap between biological intelligence and artificial systems.&rdquo;
-              </p>
-              <p className="text-lg text-cool-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-slide-up [animation-delay:500ms]">
-                {hero.summary}
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 animate-slide-up [animation-delay:600ms]">
-              <Link
-                href={hero.ctaPrimary.href}
-                className="group relative px-8 py-4 rounded-full bg-white text-cool-950 font-semibold tracking-wide overflow-hidden transition-transform hover:scale-105"
-              >
-                <span className="relative z-10">{hero.ctaPrimary.label}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-ice-400 to-fire-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-              </Link>
-
-              <Link
-                href={hero.ctaSecondary.href}
-                className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium tracking-wide backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
-              >
-                {hero.ctaSecondary.label}
-              </Link>
-
-              <a
-                href="/documents/CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium tracking-wide backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20 flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/5 animate-slide-up [animation-delay:800ms]">
-              {stats.map((item) => (
-                <div key={item.label} className="text-center lg:text-left">
-                  <p className="text-xl md:text-2xl font-bold text-white leading-tight">{item.value}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-cool-400 mt-1">{item.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Visual/Headshot */}
-          <div className="lg:w-1/3 relative animate-fade-in [animation-delay:400ms]">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-ice-500 to-fire-600 blur-2xl opacity-20 animate-pulse-slow" />
-              <div className="relative w-full h-full rounded-full border border-white/10 overflow-hidden bg-cool-800/50 backdrop-blur-sm group">
-                <Image
-                  src="/images/headshot_blended.png"
-                  alt="Ben Efron"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  priority
-                />
-                {/* Gradient Overlay for better blending */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-cool-950/40 via-transparent to-electric-500/10 mix-blend-overlay" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full" />
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 p-4 rounded-2xl bg-cool-900/80 backdrop-blur-md border border-white/10 shadow-xl animate-bounce-slow">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-ice-400 to-ice-600 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* CTA buttons */}
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={hero.ctaPrimary.href}
+            className="px-7 py-3.5 bg-[var(--accent-str)] text-white text-[12px] font-semibold uppercase tracking-[0.1em] rounded-[4px] transition-colors duration-200 hover:bg-ink"
+          >
+            {hero.ctaPrimary.label}
+          </a>
+          <a
+            href={hero.ctaSecondary.href}
+            className="px-7 py-3.5 border border-ink/10 text-ink-mid text-[12px] font-medium uppercase tracking-[0.08em] rounded-[4px] transition-colors duration-200 hover:border-ink-mid hover:text-ink"
+          >
+            {hero.ctaSecondary.label}
+          </a>
+          <a
+            href="/documents/CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3.5 border border-ink/10 text-ink-mid text-[12px] font-medium uppercase tracking-[0.08em] rounded-[4px] transition-colors duration-200 hover:border-ink-mid hover:text-ink"
+          >
+            Download CV
+          </a>
         </div>
       </div>
-    </section >
+
+      {/* Right column — photo */}
+      <div
+        className="hidden lg:block relative overflow-hidden"
+        style={{ background: "var(--bg-alt)" }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/headshot.jpg"
+          alt="Ben Efron"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 object-contain object-bottom pointer-events-none"
+          style={{
+            mixBlendMode: "multiply",
+            width: "85%",
+            maxWidth: "420px"
+          }}
+        />
+      </div>
+    </section>
   );
 }

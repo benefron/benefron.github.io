@@ -1,40 +1,42 @@
-import Link from "next/link";
 import { mediaFeatures } from "@/content/data";
 
 export function MediaHighlights() {
   return (
-    <section className="section" id="media">
-      <div className="section-heading text-center">
-        <p className="section-subtitle">Press</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">In the Media</h2>
-        <p className="text-cool-300 max-w-2xl mx-auto mt-4">
-          Coverage highlighting active sensing and neural coding research.
-        </p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3">
-        {mediaFeatures.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            target="_blank"
-            rel="noreferrer"
-            className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/10 hover:border-white/20"
+    <section className="border-t border-ink/10" id="media">
+      <div className="max-w-[1100px] mx-auto px-10 py-[100px]">
+        {/* Section header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-[10px] mb-3">
+            <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">Press</span>
+            <span className="flex-1 max-w-[60px] h-px bg-ink/10" />
+          </div>
+          <h2
+            className="font-display leading-[1.1] tracking-[-0.02em] text-ink"
+            style={{ fontSize: "clamp(36px, 3.5vw, 56px)" }}
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className="p-2 rounded-lg bg-cool-800/50 text-ice-400">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                </svg>
-              </div>
-              <span className="text-xs font-medium uppercase tracking-wider text-cool-500 group-hover:text-ice-400 transition-colors">Read Article</span>
-            </div>
+            In the Media
+          </h2>
+        </div>
 
-            <p className="text-base font-medium text-white group-hover:text-ice-200 transition-colors">
-              {item.title}
-            </p>
-          </Link>
-        ))}
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {mediaFeatures.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group block px-6 py-7 bg-bg-card border border-ink/10 rounded-[6px] transition-all duration-200 hover:border-[var(--accent)] hover:-translate-y-0.5"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--accent)] mb-3">
+                {item.source}
+              </p>
+              <p className="font-body text-[14px] text-ink leading-[1.55]">
+                {item.title}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

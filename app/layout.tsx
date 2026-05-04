@@ -1,12 +1,31 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, DM_Serif_Display, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--font-display" });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600"]
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+  weight: ["400"],
+  style: ["normal", "italic"]
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+  weight: ["400", "500"]
+});
 
 export const metadata: Metadata = {
   title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems — Ben Efron",
@@ -23,19 +42,13 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
-      <body className="bg-slate-950 text-ink-100 antialiased">
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2b1c6f_0%,rgba(17,24,39,0)_55%),radial-gradient(circle_at_bottom,#6b46ff33_0%,rgba(15,23,42,0)_60%)]">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable} ${dmMono.variable}`}>
+      <body className="antialiased">
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

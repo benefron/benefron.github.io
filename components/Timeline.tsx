@@ -1,74 +1,44 @@
-"use client";
-
 import { timeline } from "@/content/data";
-import { motion } from "framer-motion";
 
 export function Timeline() {
   return (
-    <section className="section relative" id="timeline">
-      <div className="section-heading text-center mb-16">
-        <p className="section-subtitle">Trajectory</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Experience</h2>
-        <p className="text-cool-300 max-w-2xl mx-auto mt-4">
-          Milestones linking experimental neuroscience, computation, and collaborative system design.
-        </p>
-      </div>
+    <section className="border-t border-ink/10" id="timeline">
+      <div className="max-w-[1100px] mx-auto px-10 py-[100px]">
+        {/* Section header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-[10px] mb-3">
+            <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">Trajectory</span>
+            <span className="flex-1 max-w-[60px] h-px bg-ink/10" />
+          </div>
+          <h2
+            className="font-display leading-[1.1] tracking-[-0.02em] text-ink"
+            style={{ fontSize: "clamp(36px, 3.5vw, 56px)" }}
+          >
+            Experience
+          </h2>
+        </div>
 
-      <div className="relative mx-auto max-w-7xl px-4">
-        {/* Desktop Horizontal Line */}
-        <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-ice-400 via-fire-500 to-cool-800 opacity-30" />
-
-        {/* Mobile Vertical Line */}
-        <div className="md:hidden absolute inset-y-0 left-8 w-0.5 bg-gradient-to-b from-ice-400 via-fire-500 to-cool-800 opacity-30" />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          {timeline.map((node, index) => (
-            <motion.div
-              key={node.year}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative group"
+        {/* Timeline list */}
+        <div>
+          {timeline.map((item, i) => (
+            <div
+              key={item.year}
+              className={`grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-10 py-10 border-t border-ink/10 ${i === timeline.length - 1 ? "border-b border-ink/10" : ""}`}
             >
-              {/* Desktop Layout */}
-              <div className="hidden md:flex flex-col items-center text-center h-full pt-8">
-                {/* Dot on the line */}
-                <div className="absolute top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cool-950 border-2 border-ice-400 z-10 shadow-[0_0_10px_rgba(34,211,238,0.5)] group-hover:scale-125 transition-transform duration-300" />
+              {/* Year */}
+              <p className="font-mono text-[12px] uppercase tracking-[0.1em] text-[var(--accent)] pt-1">
+                {item.year}
+              </p>
 
-                {/* Content below the line */}
-                <div className="mt-8 w-full h-full">
-                  <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
-                    <span className="inline-block px-3 py-1 rounded-full bg-cool-800/50 border border-white/10 text-xs font-semibold text-ice-400 mb-3 mx-auto">
-                      {node.year}
-                    </span>
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-ice-200 transition-colors">
-                      {node.label}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-cool-300">
-                      {node.description}
-                    </p>
-                  </div>
-                </div>
+              {/* Content */}
+              <div>
+                <h3 className="font-display text-[22px] leading-[1.3] text-ink mb-3">
+                  {item.title}<br />
+                  <span className="font-body text-[14px] font-normal text-ink-muted">{item.org}</span>
+                </h3>
+                <p className="font-body text-[15px] leading-[1.75] text-ink-mid">{item.description}</p>
               </div>
-
-              {/* Mobile Layout */}
-              <div className="md:hidden flex gap-8 pl-16 relative">
-                <div className="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-cool-950 border-2 border-ice-400 z-10 mt-1.5 shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
-
-                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <span className="inline-block px-3 py-1 rounded-full bg-cool-800/50 border border-white/10 text-xs font-semibold text-ice-400 mb-3">
-                    {node.year}
-                  </span>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    {node.label}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-cool-300">
-                    {node.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

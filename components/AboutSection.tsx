@@ -1,80 +1,65 @@
-import Image from "next/image";
-
 export function About() {
-    return (
-        <section className="section relative" id="about">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Image/Visual Side */}
-                    <div className="relative order-2 lg:order-1">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-ice-500/20 to-fire-500/20 rounded-[2rem] blur-2xl" />
-                        <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-cool-900/50 backdrop-blur-sm">
-                            <Image
-                                src="/images/combined.png"
-                                alt="Neural Reconstruction Analysis"
-                                width={3529}
-                                height={2475}
-                                className="w-full h-auto"
-                            />
-                            <div className="p-6 md:p-8 space-y-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                                        <span className="text-2xl">🧠</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-white">Systems Neuroscience</h3>
-                                        <p className="text-sm text-cool-400">Neural Computation & Dynamics</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <section className="border-t border-ink/10" id="about">
+      <div className="max-w-[1100px] mx-auto px-10 py-[100px]">
+        {/* Section header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-[10px] mb-3">
+            <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">About</span>
+            <span className="flex-1 max-w-[60px] h-px bg-ink/10" />
+          </div>
+          <h2
+            className="font-display leading-[1.1] tracking-[-0.02em] text-ink"
+            style={{ fontSize: "clamp(36px, 3.5vw, 56px)" }}
+          >
+            Bridging biology<br />and adaptive systems
+          </h2>
+        </div>
 
-                    {/* Content Side */}
-                    <div className="order-1 lg:order-2 space-y-8">
-                        <div className="space-y-4">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white">About Me</h2>
-                            <div className="h-1 w-20 bg-gradient-to-r from-ice-400 to-fire-500 rounded-full" />
-                        </div>
+        {/* Two-column grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          {/* Left — text */}
+          <div>
+            <p className="font-body text-[17px] leading-[1.8] text-ink-mid mb-6">
+              I&apos;m a systems neuroscientist working at the intersection of brain-inspired
+              technology and adaptive computation. My current research at the University of
+              Liège focuses on decoding neural circuits and translating biological insights
+              into smarter sensing and control systems.
+            </p>
+            <p className="font-body text-[17px] leading-[1.8] text-ink-mid">
+              I enjoy bridging experimental work with computational modeling and engineering
+              — pushing new boundaries in how artificial and natural systems learn, adapt,
+              and sense their worlds.
+            </p>
 
-                        <div className="space-y-6 text-cool-300 leading-relaxed">
-                            <p>
-                                I’m a systems neuroscientist working at the intersection of brain-inspired tech and adaptive computation. My current research at the University of Liège focuses on decoding neural circuits and turning biological insights into smarter sensing and control systems. I enjoy bridging experimental work with computational modeling and engineering, pushing new boundaries in how artificial and natural systems learn, adapt, and sense their worlds.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3 pt-4">
-                            {[
-                                "Neural Dynamics",
-                                "Adaptive Control",
-                                "Smart Sensing",
-                                "Bio-Engineering"
-                            ].map((item) => (
-                                <div key={item} className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-electric-400" />
-                                    <span className="text-sm font-medium text-cool-200">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Impact Metrics */}
-                        <div className="pt-8 border-t border-white/5 grid grid-cols-3 gap-4">
-                            <div>
-                                <p className="text-2xl font-bold text-white">7+</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Years Experience</p>
-                            </div>
-                            <div>
-                                <p className="text-2xl font-bold text-white">PhD</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Systems Neuroscience</p>
-                            </div>
-                            <div>
-                                <p className="text-2xl font-bold text-white">3</p>
-                                <p className="text-xs text-cool-400 uppercase tracking-wider">Partner Institutes</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {/* Tag pills */}
+            <div className="flex flex-wrap gap-2 mt-8">
+              {["Neural Dynamics", "Adaptive Control", "Smart Sensing", "Bio-Engineering", "HD-MEA", "Neuromorphic Computing"].map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-[11px] tracking-[0.08em] px-3.5 py-1.5 border border-ink/10 rounded-[3px] text-ink-mid"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-        </section>
-    );
+          </div>
+
+          {/* Right — metrics */}
+          <div>
+            {[
+              { value: "7+", label: "Years of experimental & computational neuroscience research" },
+              { value: "PhD", label: "Systems Neuroscience — Weizmann Institute of Science" },
+              { value: "3", label: "Partner institutes across Europe and Israel" }
+            ].map((metric, i) => (
+              <div key={i} className={`pb-6 ${i < 2 ? "mb-6 border-b border-ink/10" : ""}`}>
+                <p className="font-display text-[52px] leading-none text-ink mb-1.5">{metric.value}</p>
+                <p className="font-body text-[13px] text-ink-muted">{metric.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
