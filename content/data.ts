@@ -143,21 +143,41 @@ export const mediaFeatures = [
 
 export const projects = [
   {
-    name: "Neural Closed-Loop Controller",
-    desc: "Real-time closed-loop feedback system for HD-MEA experiments using Open Ephys.",
-    tags: ["Python", "Open Ephys", "HD-MEA", "Real-time"],
-    href: "https://github.com/benefron"
+    name: "Spike-Gated Event-Driven State Estimation",
+    period: "Jan 2025 – Present",
+    org: "Neuroengineering Lab, ULiège",
+    desc: "Inference extension of the SensoryForge pipeline. Sparse, asynchronous spike events from the SA/RA encoder drive computationally efficient spatiotemporal state estimation — neural firing gates where and how computation occurs. Designed from the ground up for FPGA and neuromorphic hardware, targeting real-time tactile intelligence for robotic and edge platforms.",
+    tags: ["Control Theory", "Event-Driven", "FPGA / Neuromorphic", "Real-time"],
+    href: null,
+    visibility: "Private repo"
   },
   {
-    name: "Population Dynamics Decoder",
-    desc: "Neural-behavioral decoding pipeline for whisker-generated sound experiments.",
-    tags: ["Python", "NumPy", "scikit-learn", "Neuroscience"],
-    href: "https://github.com/benefron"
+    name: "NEMODAI — Closed-Loop Control of Neuronal Cultures",
+    period: "Aug 2024 – Present",
+    org: "Neuroengineering Lab, ULiège",
+    desc: "Engineering and directing the activity of cultured neuronal networks toward defined functional states. Sits at the intersection of systems neuroscience, control theory, molecular biology, and electrophysiology. HD-MEA platform enables network-wide readout alongside fine-grained stimulation — uniquely suited for closed-loop experiments. Includes hardware-software co-definition with the imec engineering team for low-latency, real-time data streaming and online computation.",
+    tags: ["Closed-Loop Control", "HD-MEA", "Real-time Systems", "imec Co-design"],
+    href: null,
+    visibility: "Private repo"
   },
   {
-    name: "MEA Analysis Toolkit",
-    desc: "Modular analysis suite for high-density microelectrode array data.",
-    tags: ["Python", "imec", "SpikeInterface", "Bonsai RX"],
-    href: "https://github.com/benefron"
+    name: "SensoryForge — Sensory Encoding Simulation Environment",
+    period: "Jun 2024 – Present",
+    org: "Neuroengineering Lab, ULiège",
+    desc: "Open-source simulation environment with GUI and CLI for designing sensory pipelines — from stimulus generation, through response on a sensory space, to translation into spiking neuron populations. Built on PyTorch, extensible by design; users define sensory spaces, custom filters, receptive fields, and stack neuronal layers. Batch processing generates large datasets for training, testing, and hypothesis validation.",
+    tags: ["PyTorch", "Open Source", "Signal Processing", "Spiking Models"],
+    href: "https://github.com/benefron/sensoryforge",
+    visibility: null
   }
+];
+
+export const otherRepos = [
+  { name: "scientific-publications", desc: "AI ecosystem for editing scientific writing", href: "https://github.com/benefron/scientific-publications" },
+  { name: "Neuropixel-experiment", desc: "Multi-modal electrophysiology + behavior — Bonsai, Arduino, system sync, real-time movement ID, FSM", href: "https://github.com/benefron/Neuropixel-experiment" },
+  { name: "Detection_task", desc: "Complete code for a behavioral detection experiment", href: "https://github.com/benefron/Detection_task" },
+  { name: "learning_protocol", desc: "Draft + GUI demo for running learning protocols on HD-MEA", href: "https://github.com/benefron/learning_protocol" },
+  { name: "Electrode-view", desc: "First iteration mapping electrodes to streamed HD-MEA data (now part of a newer private GUI)", href: "https://github.com/benefron/Electrode-view" },
+  { name: "Counter", desc: "GUI for tracking the position of a precision 4-axis manipulator", href: "https://github.com/benefron/Counter" },
+  { name: "Arduino_Codes", desc: "Arduino sketches for running experiments", href: "https://github.com/benefron/Arduino_Codes" },
+  { name: "Matlab_new", desc: "Various MATLAB code for data analysis", href: "https://github.com/benefron/Matlab_new" }
 ];
