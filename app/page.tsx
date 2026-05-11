@@ -1,10 +1,13 @@
+"use client";
+
+import { useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/AboutSection";
 import { FocusGrid } from "@/components/FocusGrid";
 import { Timeline } from "@/components/Timeline";
 import { Publications } from "@/components/Publications";
-import { SkillColumns } from "@/components/SkillColumns";
 import { Projects } from "@/components/Projects";
+import { SkillColumns } from "@/components/SkillColumns";
 import { MediaHighlights } from "@/components/MediaHighlights";
 import { contact } from "@/content/data";
 
@@ -16,22 +19,40 @@ const contactLinks = [
 ];
 
 export default function HomePage() {
+  useEffect(() => {
+    const els = document.querySelectorAll<HTMLElement>(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main>
       <Hero />
-      <About />
-      <FocusGrid />
-      <Timeline />
-      <Publications />
-      <SkillColumns />
-      <Projects />
-      <MediaHighlights />
+
+      <div className="reveal"><About /></div>
+      <div className="reveal"><FocusGrid /></div>
+      <div className="reveal"><Timeline /></div>
+      <div className="reveal"><Publications /></div>
+      <div className="reveal"><Projects /></div>
+      <div className="reveal"><SkillColumns /></div>
+      <div className="reveal"><MediaHighlights /></div>
 
       {/* Contact Section */}
       <section
         id="contact"
         style={{ background: "var(--ink)" }}
-        className="px-10 py-[100px]"
+        className="px-10 py-[100px] reveal"
       >
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left */}
