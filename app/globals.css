@@ -2,29 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Single source of truth for colour.
+  Channel triples feed Tailwind (so `border-ink/10` style opacity modifiers work);
+  the solid vars below are derived from them for the few inline `style` uses.
+*/
 :root {
   color-scheme: light;
-  --bg: #f5f3ee;
-  --bg-alt: #ede9e2;
-  --bg-card: #ffffff;
-  --ink: #1a1714;
-  --ink-mid: #4a4540;
-  --ink-muted: #8a8278;
-  --accent: oklch(47% 0.14 195);
-  --accent-str: oklch(40% 0.16 195);
-  --rule: rgba(26, 23, 20, 0.1);
+
+  --bg-rgb: 245 243 238;
+  --bg-alt-rgb: 237 233 226;
+  --bg-card-rgb: 255 255 255;
+  --ink-rgb: 26 23 20;
+  --ink-mid-rgb: 74 69 64;
+  --ink-muted-rgb: 138 130 120;
+  --accent-rgb: 0 113 115;
+  --accent-str-rgb: 0 94 98;
+
+  --bg: rgb(var(--bg-rgb));
+  --bg-alt: rgb(var(--bg-alt-rgb));
+  --bg-card: rgb(var(--bg-card-rgb));
+  --ink: rgb(var(--ink-rgb));
+  --ink-mid: rgb(var(--ink-mid-rgb));
+  --ink-muted: rgb(var(--ink-muted-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --accent-str: rgb(var(--accent-str-rgb));
+
+  /* Two rule weights: hairlines inside a block, a firmer line between blocks. */
+  --rule: rgb(var(--ink-rgb) / 0.10);
+  --rule-strong: rgb(var(--ink-rgb) / 0.18);
 }
 
 body {
   background: var(--bg);
   color: var(--ink);
   font-family: theme('fontFamily.body');
-  overflow-x: hidden;
 }
 
+/*
+  No overflow-x:hidden here on purpose. It used to mask a Hero that could not
+  shrink below ~924px, and it broke in-page anchor scrolling as a side effect.
+  The layout is now genuinely responsive, so the hack is not needed.
+*/
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  /* Fixed 60px header: keep anchor targets from landing under it. */
+  scroll-padding-top: 72px;
 }
 
 .reveal {
@@ -36,4 +59,9 @@ html {
 .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
 }

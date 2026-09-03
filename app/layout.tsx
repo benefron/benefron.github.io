@@ -28,13 +28,15 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems — Ben Efron",
+  metadataBase: new URL("https://benefron.github.io"),
+  title: "Ben Efron, PhD — Systems Neuroscientist & R&D Engineer",
   description:
-    "I study how neural systems encode and act on sensory information, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
+    "Systems neuroscientist and R&D engineer. Nine years of neural computation, electrophysiology and statistical modelling, and the sensing hardware, real-time control and applied-AI systems built to test it.",
+  icons: { icon: "/images/favicon.svg" },
   openGraph: {
-    title: "Systems Neuroscientist | Neural Coding & Behavior | Bio-Inspired Sensing & Adaptive Systems — Ben Efron",
+    title: "Ben Efron, PhD — Systems Neuroscientist & R&D Engineer",
     description:
-      "I study how neural systems encode and act on sensory information, and explore how biological design principles can inform efficient, robust, and adaptive artificial systems.",
+      "Neural computation, electrophysiology and statistical modelling, alongside real-time systems and applied AI. Based in Leuven, Belgium.",
     url: "https://benefron.github.io",
     siteName: "Ben Efron",
     locale: "en_US",

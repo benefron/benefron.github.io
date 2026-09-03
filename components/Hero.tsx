@@ -2,108 +2,56 @@ import { hero } from "@/content/data";
 
 export function Hero() {
   return (
-    <section style={{ paddingTop: "60px", background: "var(--bg)" }}>
-      {/* Hero card */}
+    <section className="pt-[60px] bg-bg">
       <div
-        style={{
-          borderTop: "1px solid var(--rule)",
-          borderBottom: "1px solid var(--rule)",
-          background: "var(--bg)",
-          padding: "72px 80px",
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: "64px",
-          alignItems: "start",
-          maxWidth: "100%",
-        }}
+        className="border-y px-6 py-12 sm:px-10 sm:py-16 lg:px-20 lg:py-[72px] grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-start"
+        style={{ borderColor: "var(--rule-strong)" }}
       >
-        {/* Left — text */}
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {/* Eyebrow */}
+        {/* Text */}
+        <div className="flex flex-col order-2 lg:order-1 min-w-0">
           <div className="flex items-center gap-3 mb-5">
-            <span className="block w-8 h-px" style={{ background: "var(--accent)" }} />
-            <span
-              className="font-mono uppercase"
-              style={{ fontSize: "11px", letterSpacing: "0.15em", color: "var(--accent)" }}
-            >
-              Systems Neuroscientist
-            </span>
+            <span className="block w-8 h-px bg-accent" />
+            <span className="font-mono uppercase text-eyebrow text-accent">{hero.eyebrow}</span>
           </div>
 
-          {/* Name */}
-          <h1
-            className="font-display leading-none tracking-[-0.02em] text-ink mb-3"
-            style={{ fontSize: "clamp(52px, 5.5vw, 80px)" }}
-          >
-            Ben Efron,<br />
-            <em style={{ color: "var(--ink-mid)" }}>PhD</em>
+          <h1 className="font-display text-h1 text-ink mb-3">
+            Ben Efron,
+            <br />
+            <em className="text-ink-mid">PhD</em>
           </h1>
 
-          {/* Tagline */}
-          <p
-            className="font-body uppercase text-ink-muted mb-8"
-            style={{ fontSize: "13px", letterSpacing: "0.06em", lineHeight: "1.8" }}
-          >
-            Neural Computation · Adaptive Dynamics · Bio-Inspired Design
+          <p className="font-body uppercase text-micro text-ink-muted mb-3">{hero.tagline}</p>
+
+          <p className="font-mono text-[11px] text-ink-muted mb-8">{hero.location}</p>
+
+          <p className="font-body text-body-lg text-ink-mid mb-10 max-w-[560px] border-l-2 border-accent pl-5">
+            {hero.summary}
           </p>
 
-          {/* Summary */}
-          <p
-            className="font-body text-ink-mid mb-10"
-            style={{
-              fontSize: "17px",
-              lineHeight: "1.75",
-              maxWidth: "560px",
-              borderLeft: "2px solid var(--accent)",
-              paddingLeft: "20px",
-            }}
-          >
-            I study how neural circuits compute and adapt, translating these principles
-            into strategies for{" "}
-            <strong>sensing, representation, and closed-loop control.</strong>
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href={hero.ctaPrimary.href}
-              className="px-7 py-3.5 text-white font-semibold uppercase rounded-[4px] transition-colors duration-200 hover:bg-ink"
-              style={{ fontSize: "12px", letterSpacing: "0.1em", background: "var(--accent-str)" }}
+              className="w-full sm:w-auto text-center px-7 py-3.5 text-white font-semibold uppercase text-[12px] tracking-[0.1em] rounded-[4px] bg-accent-str transition-colors duration-200 hover:bg-ink"
             >
               {hero.ctaPrimary.label}
             </a>
             <a
               href={hero.ctaSecondary.href}
-              className="px-7 py-3.5 text-ink-mid font-medium uppercase rounded-[4px] border border-ink/10 transition-colors duration-200 hover:border-ink-mid hover:text-ink"
-              style={{ fontSize: "12px", letterSpacing: "0.08em" }}
+              className="w-full sm:w-auto text-center px-7 py-3.5 text-ink-mid font-medium uppercase text-[12px] tracking-[0.08em] rounded-[4px] border border-ink/10 transition-colors duration-200 hover:border-ink-mid hover:text-ink"
             >
               {hero.ctaSecondary.label}
             </a>
           </div>
         </div>
 
-        {/* Right — circular photo */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "flex-end",
-            width: "300px",
-            flexShrink: 0,
-          }}
-        >
+        {/* Portrait */}
+        <div className="order-1 lg:order-2 flex justify-center lg:justify-end shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/headshot_matched.png"
             alt="Ben Efron"
-            style={{
-              width: "280px",
-              height: "280px",
-              objectFit: "cover",
-              objectPosition: "center 18%",
-              borderRadius: "50%",
-              border: "1px solid var(--rule)",
-            }}
+            className="rounded-full object-cover border border-ink/10 w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] lg:w-[240px] lg:h-[240px]"
+            style={{ objectPosition: "center 18%" }}
           />
         </div>
       </div>
