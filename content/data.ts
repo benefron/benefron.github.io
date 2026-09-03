@@ -158,9 +158,9 @@ export const projects: Project[] = [
       { label: "Channel compression", value: "6,400 to 400" },
       { label: "Interfaces", value: "GUI, CLI, YAML" }
     ],
-    stack: ["PyTorch", "Spiking Models", "Signal Processing", "Simulation"],
-    links: [],
-    status: "private"
+    stack: ["PyTorch", "Open Source", "Spiking Models", "Signal Processing"],
+    links: [{ label: "Source", href: "https://github.com/benefron/sensoryforge", kind: "source" }],
+    status: "open-source"
   },
   {
     name: "Retrieval and LLM Enrichment Pipeline",
