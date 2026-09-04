@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
+  { label: "About", href: "#about" },
   { label: "Research", href: "#research" },
   { label: "Work", href: "#projects" },
   { label: "Approach", href: "#approach" },
   { label: "Experience", href: "#timeline" },
-  { label: "Publications", href: "#publications" },
+  { label: "Record", href: "#publications" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -25,7 +26,7 @@ export function Header() {
           Ben Efron, <em>PhD</em>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -39,7 +40,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="md:hidden p-2 text-ink focus:outline-none"
+          className="lg:hidden p-2 text-ink rounded-[4px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
@@ -52,17 +53,17 @@ export function Header() {
       </div>
 
       <div
-        className={`absolute inset-x-0 top-full border-b border-ink/10 md:hidden transition-all duration-200 ${
+        className={`absolute inset-x-0 top-full border-b border-ink/10 lg:hidden transition-all duration-200 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         style={{ background: "rgba(245,243,238,0.95)", backdropFilter: "blur(12px)" }}
       >
-        <div className="flex flex-col px-6 py-4 space-y-4">
+        <div className="flex flex-col px-6 py-2">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-sm font-medium uppercase tracking-[0.1em] text-ink-muted hover:text-ink transition-colors"
+              className="block py-3.5 font-body text-sm font-medium uppercase tracking-[0.1em] text-ink-muted hover:text-ink transition-colors"
               onClick={() => setOpen(false)}
             >
               {link.label}

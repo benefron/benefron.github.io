@@ -1,15 +1,18 @@
-import { focusAreas } from "@/content/data";
+import { focusAreas, focusQuestion } from "@/content/data";
 import { Section, IndexMark } from "@/components/ui/Section";
 
 export function FocusGrid() {
   return (
-    <Section
-      id="research"
-      eyebrow="Research"
-      heading="Research focus"
-      intro="Linking active sensing, neural coding, and system-level design principles."
-    >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <Section id="research" eyebrow="Research" heading="Research focus">
+      <div className="mb-12 pb-12 border-b border-ink/10">
+        <p className="font-mono text-eyebrow uppercase text-accent mb-4">{focusQuestion.eyebrow}</p>
+        <p className="font-display text-h3 leading-snug text-ink max-w-[760px]">
+          {focusQuestion.question}
+        </p>
+        <p className="font-body text-body text-ink-mid mt-5 max-w-prose">{focusQuestion.framing}</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {focusAreas.map((item, index) => (
           <article
             key={item.title}

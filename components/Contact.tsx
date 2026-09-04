@@ -3,7 +3,9 @@ import { contact } from "@/content/data";
 const contactLinks = [
   { label: "Email", value: contact.email, href: `mailto:${contact.email}` },
   { label: "LinkedIn", value: "Connect on LinkedIn", href: contact.linkedin },
-  { label: "GitHub", value: "github.com/benefron", href: contact.github }
+  { label: "GitHub", value: "github.com/benefron", href: contact.github },
+  { label: "Google Scholar", value: "Publications and citations", href: contact.scholar },
+  { label: "ORCID", value: "0009-0006-5875-6056", href: contact.orcid }
 ];
 
 export function Contact() {

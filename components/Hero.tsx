@@ -24,9 +24,18 @@ export function Hero() {
 
           <p className="font-mono text-[11px] text-ink-muted mb-8">{hero.location}</p>
 
-          <p className="font-body text-body-lg text-ink-mid mb-10 max-w-[560px] border-l-2 border-accent pl-5">
+          <p className="font-body text-body-lg text-ink-mid mb-9 max-w-[560px] border-l-2 border-accent pl-5">
             {hero.summary}
           </p>
+
+          <dl className="grid grid-cols-3 gap-4 sm:gap-6 mb-10 pb-8 border-b border-ink/10 max-w-[560px]">
+            {hero.metrics.map((m) => (
+              <div key={m.value}>
+                <dt className="font-display text-[clamp(24px,3vw,34px)] leading-none text-ink">{m.value}</dt>
+                <dd className="font-body text-[12px] leading-[1.45] text-ink-muted mt-2">{m.label}</dd>
+              </div>
+            ))}
+          </dl>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <a

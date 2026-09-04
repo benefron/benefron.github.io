@@ -1,13 +1,27 @@
-import { publications, mediaFeatures } from "@/content/data";
+import { publications, mediaFeatures, formatCitation, publicationTypeLabel } from "@/content/data";
+import type { Publication } from "@/content/data";
 import { Section, ArrowLink } from "@/components/ui/Section";
+
+function TypeBadge({ type }: { type: Publication["type"] }) {
+  const accent = type === "upcoming" || type === "fellowship";
+  return (
+    <span
+      className={`font-mono text-[10px] uppercase tracking-[0.06em] px-2 py-0.5 rounded-[3px] border whitespace-nowrap ${
+        accent ? "border-accent/40 text-accent" : "border-ink/10 text-ink-muted"
+      }`}
+    >
+      {publicationTypeLabel[type]}
+    </span>
+  );
+}
 
 export function Publications() {
   return (
     <Section id="publications" eyebrow="Record" heading="Publications & talks">
       <div>
-        {publications.map((paper, index) => (
+        {publications.map((pub, index) => (
           <div
-            key={paper.title}
+            key={pub.title}
             className={`grid grid-cols-1 sm:grid-cols-[40px_1fr] md:grid-cols-[48px_1fr_auto] items-start gap-x-5 gap-y-2 py-7 border-t border-ink/10 ${
               index === publications.length - 1 ? "border-b border-ink/10" : ""
             }`}
@@ -17,13 +31,19 @@ export function Publications() {
             </span>
 
             <div className="min-w-0">
-              <p className="font-mono text-micro uppercase text-accent mb-2">{paper.venue}</p>
-              <h3 className="font-body text-body-lg font-medium text-ink mb-1.5">{paper.title}</h3>
-              <p className="font-body text-small text-ink-muted">{paper.summary}</p>
+              <div className="flex items-center flex-wrap gap-2.5 mb-2">
+                <TypeBadge type={pub.type} />
+                <span className="font-mono text-micro uppercase text-accent">{pub.venue}</span>
+              </div>
+              <h3 className="font-body text-body-lg font-medium text-ink mb-1.5">{pub.title}</h3>
+              <p className="font-body text-small text-ink-muted">{formatCitation(pub)}</p>
+              {pub.summary ? (
+                <p className="font-body text-small text-ink-mid mt-2">{pub.summary}</p>
+              ) : null}
             </div>
 
             <div className="sm:col-start-2 md:col-start-3 md:pt-1 flex flex-row md:flex-col flex-wrap gap-x-5 gap-y-2">
-              {paper.links.map((link) => (
+              {pub.links.map((link) => (
                 <ArrowLink key={link.href} href={link.href}>
                   {link.label}
                 </ArrowLink>
@@ -33,7 +53,6 @@ export function Publications() {
         ))}
       </div>
 
-      {/* Press coverage, as a trailing strip rather than its own section */}
       <div className="mt-12">
         <p className="font-mono text-micro uppercase tracking-[0.15em] text-ink-muted pb-3.5 border-b border-ink/10">
           Also featured in
