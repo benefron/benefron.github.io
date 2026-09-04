@@ -53,21 +53,20 @@ export function Publications() {
         ))}
       </div>
 
-      <div className="mt-12">
-        <p className="font-mono text-micro uppercase tracking-[0.15em] text-ink-muted pb-3.5 border-b border-ink/10">
+      <div className="mt-10 pt-6 border-t border-ink/10 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
+        <p className="font-mono text-micro uppercase tracking-[0.15em] text-ink-muted shrink-0">
           Also featured in
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
           {mediaFeatures.map((item) => (
             <a
               key={item.href}
               href={item.href}
               target="_blank"
               rel="noreferrer"
-              className="block px-5 py-5 bg-bg-card border border-ink/10 rounded-[8px] transition-colors duration-200 hover:border-accent/40"
+              className="font-body text-small text-ink-mid underline decoration-ink/20 underline-offset-4 hover:text-ink hover:decoration-accent rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <p className="font-mono text-eyebrow uppercase text-accent mb-2.5">{item.source}</p>
-              <p className="font-body text-small text-ink">{item.title}</p>
+              {item.source}
             </a>
           ))}
         </div>

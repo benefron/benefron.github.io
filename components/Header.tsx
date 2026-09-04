@@ -7,7 +7,6 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Research", href: "#research" },
   { label: "Work", href: "#projects" },
-  { label: "Approach", href: "#approach" },
   { label: "Experience", href: "#timeline" },
   { label: "Record", href: "#publications" },
   { label: "Contact", href: "#contact" }
@@ -22,7 +21,7 @@ export function Header() {
       style={{ background: "rgba(245,243,238,0.85)", backdropFilter: "blur(12px)" }}
     >
       <div className="mx-auto flex w-full max-w-shell items-center justify-between px-6 sm:px-10">
-        <Link href="#" className="font-display text-[18px] text-ink">
+        <Link href="#" className="font-display text-[18px] text-ink rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">
           Ben Efron, <em>PhD</em>
         </Link>
 
@@ -31,7 +30,7 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-[12px] font-medium uppercase tracking-[0.1em] text-ink-muted transition-colors duration-200 hover:text-ink"
+              className="font-body text-[12px] font-medium uppercase tracking-[0.1em] text-ink-muted transition-colors duration-200 hover:text-ink rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {link.label}
             </a>
@@ -63,7 +62,7 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="block py-3.5 font-body text-sm font-medium uppercase tracking-[0.1em] text-ink-muted hover:text-ink transition-colors"
+              className="block py-3.5 font-body text-sm font-medium uppercase tracking-[0.1em] text-ink-muted hover:text-ink transition-colors rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               onClick={() => setOpen(false)}
             >
               {link.label}

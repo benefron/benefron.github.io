@@ -83,7 +83,7 @@ export function ArrowLink({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`group inline-flex items-center font-mono text-micro uppercase no-underline ${color}`}
+      className={`group inline-flex items-center font-mono text-micro uppercase no-underline rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${color}`}
     >
       {children}
       <span className="ml-1.5 transition-[margin] duration-200 group-hover:ml-2.5">→</span>

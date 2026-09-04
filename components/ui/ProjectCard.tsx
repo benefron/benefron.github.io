@@ -19,7 +19,7 @@ function StatusBadge({ status }: { status: Project["status"] }) {
 function TechnicalDetail({ detail }: { detail: NonNullable<Project["detail"]> }) {
   return (
     <details className="group border-t border-ink/10 pt-4">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-ink-muted transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden [&::marker]:content-none">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-2.5 -my-0.5 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-ink-muted transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden [&::marker]:content-none">
         <span>Technical detail</span>
         <span
           aria-hidden="true"
@@ -65,7 +65,7 @@ function CardBody({ project, index }: { project: Project; index: number }) {
       <p className="font-body text-body text-ink">{project.claim}</p>
       <p className="font-body text-small text-ink-mid">{project.desc}</p>
 
-      {project.metrics.length > 0 ? (
+      {project.metrics.length > 0 && project.layout === "featured" ? (
         <dl className="grid grid-cols-2 gap-x-5 gap-y-4 border-y border-ink/10 py-4">
           {project.metrics.map((m) => (
             <div key={m.label}>

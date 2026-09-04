@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 
 export function Timeline() {
   return (
-    <Section id="timeline" eyebrow="Trajectory" heading="Experience">
+    <Section id="timeline" eyebrow="Trajectory" heading="Experience" spacing="compact">
       <div>
         {timeline.map((item, i) => (
           <div

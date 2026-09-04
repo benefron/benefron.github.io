@@ -19,8 +19,8 @@ export function Contact() {
             <em>together.</em>
           </h2>
           <p className="font-body text-body" style={{ color: "rgba(255,255,255,0.6)" }}>
-            Open to research and postdoctoral positions, R&amp;D and research engineering,
-            data science, and applied AI roles. Based in Leuven, Belgium.
+            Open to R&amp;D and research engineering, applied AI, and research positions at
+            institutes working on bio-inspired and event-based systems. Based in Leuven, Belgium.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export function Contact() {
               href={item.href}
               target={item.href.startsWith("mailto") ? undefined : "_blank"}
               rel={item.href.startsWith("mailto") ? undefined : "noreferrer"}
-              className="flex items-center justify-between gap-4 px-6 py-5 rounded-[6px] border border-white/15 transition-all duration-200 hover:border-white/50 hover:bg-white/5"
+              className="flex items-center justify-between gap-4 px-6 py-5 rounded-[6px] border border-white/15 transition-all duration-200 hover:border-white/50 hover:bg-white/5 rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/70 focus-visible:outline-offset-2"
             >
               <div className="min-w-0">
                 <p

@@ -40,13 +40,13 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href={hero.ctaPrimary.href}
-              className="w-full sm:w-auto text-center px-7 py-3.5 text-white font-semibold uppercase text-[12px] tracking-[0.1em] rounded-[4px] bg-accent-str transition-colors duration-200 hover:bg-ink"
+              className="w-full sm:w-auto text-center px-7 py-3.5 text-white font-semibold uppercase text-[12px] tracking-[0.1em] rounded-[4px] bg-accent-str transition-colors duration-200 hover:bg-ink rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {hero.ctaPrimary.label}
             </a>
             <a
               href={hero.ctaSecondary.href}
-              className="w-full sm:w-auto text-center px-7 py-3.5 text-ink-mid font-medium uppercase text-[12px] tracking-[0.08em] rounded-[4px] border border-ink/10 transition-colors duration-200 hover:border-ink-mid hover:text-ink"
+              className="w-full sm:w-auto text-center px-7 py-3.5 text-ink-mid font-medium uppercase text-[12px] tracking-[0.08em] rounded-[4px] border border-ink/10 transition-colors duration-200 hover:border-ink-mid hover:text-ink rounded-[2px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {hero.ctaSecondary.label}
             </a>
