@@ -120,11 +120,9 @@ export const projects: Project[] = [
         "Restructuring the covariance into independent per-cell blocks makes the update linear in receptive-field size and removes matrix inversion and square roots from the hot path. The saving is in operations, not wall clock: the reference implementation is interpreter-bound, so gating performs fewer operations while running no faster on a laptop. The headroom is what matters for hardware.",
       specs: [
         { label: "Per-cell update", value: "O(K) in receptive-field size" },
-        { label: "State memory, 80×80 grid", value: "~200 KB" },
-        { label: "Arithmetic per step", value: "~4.7 × 10⁵ FLOPs" },
-        { label: "Gating reduces updates by", value: "2.1× to 7.6×" },
-        { label: "Cost of that gating", value: "7% to 24% higher error" },
-        { label: "Real time at 1 kHz needs", value: "468 MFLOP/s" }
+        { label: "Channel compression", value: "6× to 16×" },
+        { label: "Decoder compute, equal error", value: "141 to 2.8 GFLOP/s (about 50×)" },
+        { label: "Status", value: "In simulation, designed for embedded hardware" }
       ]
     },
     metrics: [
@@ -161,7 +159,7 @@ export const projects: Project[] = [
     claim:
       "Making a research recording platform capable of closed-loop experiments it was not originally built to run.",
     desc:
-      "I am the technical interface to the imec engineering team on the NEMODEI project. My work is on the platform itself: exposing synchronisation with external devices, extending the API so closed-loop control is possible at all, keeping data streaming stably enough for online computation, and making recordings repeatable without restarting the system between runs. Much of it is finding the workable solution rather than the optimal one, with imec's engineering and scientific staff.",
+      "I am the primary technical liaison to imec's Life Science Technology engineers on the NEMODEI project. My work is on the platform itself: exposing synchronisation with external devices, extending the API so closed-loop control is possible at all, keeping data streaming stably enough for online computation, and making recordings repeatable without restarting the system between runs. Much of it is finding the workable solution rather than the optimal one, with imec's engineering and scientific staff.",
     detail: {
       summary:
         "The underlying platform records 1024 channels at 30 kHz. The engineering contribution is what sits around that: external device synchronisation, an API extended for closed-loop use, and control from Python deep enough to drive an experiment end to end.",
@@ -172,7 +170,7 @@ export const projects: Project[] = [
       ]
     },
     metrics: [
-      { label: "Role", value: "Primary imec technical interface" },
+      { label: "Role", value: "Primary technical liaison to imec" },
       { label: "Enabled", value: "Closed-loop experiments" }
     ],
     stack: ["Closed-Loop Control", "HD-MEA", "PyQt5", "API Design"],
@@ -192,7 +190,7 @@ export const projects: Project[] = [
       summary:
         "An Arduino acted as timing master over a custom PCB synchronising every stream. I wrote the real-time processing on top and traced the analogue noise that high-sensitivity recording exposes.",
       specs: [
-        { label: "Cross-sensor sync", value: "Sub-millisecond, six streams" },
+        { label: "Cross-sensor sync", value: "Hardware-timed, six streams" },
         { label: "Video", value: "400 fps" },
         { label: "Audio", value: "125 kHz" },
         { label: "Electrophysiology", value: "30 kHz" },
@@ -237,7 +235,7 @@ export const projects: Project[] = [
     desc:
       "Built on PyTorch and extensible by design. Users define sensory spaces, filters and receptive fields, stack neuronal layers, and describe new neuron models through an equation DSL without writing code. Batch runs generate datasets for training and hypothesis testing. It grew out of the event-based estimation work and was extracted into its own repository once it became useful on its own.",
     metrics: [
-      { label: "Channel compression", value: "6,400 to 392" },
+      { label: "Neuron models", value: "Izhikevich, AdEx, MQIF" },
       { label: "Interfaces", value: "GUI, CLI, YAML" }
     ],
     stack: ["PyTorch", "Open Source", "Spiking Models", "Simulation"],
@@ -291,20 +289,11 @@ export function formatCitation(pub: Publication): string {
 
 export const publications: Publication[] = [
   {
-    type: "upcoming",
-    title: "Sparse event-based communication and decoding of spatiotemporal stimuli",
-    authors: "Efron, B., Drion, G., Sacré, P., & Franci, A.",
-    venue: "Neuromorphic Computing Netherlands",
-    detail: "accepted, Maastricht, 20 October 2026",
-    year: 2026,
-    links: []
-  },
-  {
     type: "talk",
-    title: "Biologically inspired sparse event-based communication and decoding of spatiotemporal stimuli",
-    authors: "Efron, B., Drion, G., Sacré, P., & Franci, A.",
-    venue: "Benelux Meeting on Systems and Control",
-    detail: "selected talk, March 2026",
+    title: "Adaptive state-space inference for sensory reconstruction",
+    authors: "Efron, B.",
+    venue: "BENELUX Meeting on Systems and Control",
+    detail: "talk",
     year: 2026,
     links: []
   },
