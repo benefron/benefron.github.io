@@ -29,12 +29,12 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://benefron.github.io"),
-  title: "Ben Efron, PhD | R&D Engineer & Systems Neuroscientist",
+  title: "Ben Efron, PhD | Neuroscientist and Systems Engineer",
   description:
-    "I study how neural circuits encode and adapt, and I build the systems that test it: biologically inspired algorithms, event-based sensing, real-time control, and the analysis that says what the data supports. Based in Leuven, Belgium.",
+    "Neuroscientist who builds: closed-loop neural interfaces, sensing hardware and brain-inspired algorithms for efficient sensing. Based in Leuven, Belgium.",
   icons: { icon: "/images/favicon.svg" },
   openGraph: {
-    title: "Ben Efron, PhD | R&D Engineer & Systems Neuroscientist",
+    title: "Ben Efron, PhD | Neuroscientist and Systems Engineer",
     description:
       "Biologically inspired algorithms, event-based sensing and real-time systems, built end to end. Based in Leuven, Belgium.",
     url: "https://benefron.github.io",

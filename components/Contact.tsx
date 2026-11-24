@@ -4,6 +4,7 @@ const contactLinks = [
   { label: "Email", value: contact.email, href: `mailto:${contact.email}` },
   { label: "LinkedIn", value: "Connect on LinkedIn", href: contact.linkedin },
   { label: "GitHub", value: "github.com/benefron", href: contact.github },
+  { label: "CV", value: "Download the CV (PDF)", href: contact.cv },
   { label: "Google Scholar", value: "Publications and citations", href: contact.scholar },
   { label: "ORCID", value: "0009-0006-5875-6056", href: contact.orcid }
 ];
@@ -19,8 +20,8 @@ export function Contact() {
             <em>together.</em>
           </h2>
           <p className="font-body text-body" style={{ color: "rgba(255,255,255,0.6)" }}>
-            Open to R&amp;D and research engineering, applied AI, and research positions at
-            institutes working on bio-inspired and event-based systems. Based in Leuven, Belgium.
+            Open to R&amp;D and research engineering roles in neural interfaces, sensing and
+            brain-inspired computing, and to research positions at institutes working on them. Based in Leuven, Belgium.
           </p>
         </div>
 

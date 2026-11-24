@@ -1,14 +1,14 @@
 export const hero = {
   name: "Ben Efron, PhD",
-  eyebrow: "R&D Engineer · Systems Neuroscientist",
+  eyebrow: "Neuroscientist · Systems Engineer",
   title:
-    "R&D Engineer & Systems Neuroscientist | Biologically Inspired Algorithms, Event-Based Sensing & Real-Time Systems | Neural Data, Statistical Modelling & Applied AI",
-  tagline: "Bio-Inspired Algorithms · Event-Based Sensing · Real-Time Systems",
+    "Neuroscientist and Systems Engineer | NeuroAI and Bio-Inspired Computing | Closed-Loop Neural Interfaces",
+  tagline: "NeuroAI · Bio-Inspired Computing · Closed-Loop Neural Interfaces",
   location: "Leuven, Belgium",
   summary:
-    "I study how neural circuits encode and adapt, and I build the systems that test it: sensing hardware, real-time control, the models that run on top, and the statistical analysis that says what the data actually supports.",
+    "I am a neuroscientist who builds. I study how brains sense and adapt, then turn those principles into algorithms and working technology: sensing hardware, closed-loop neural interfaces and efficient, brain-inspired software.",
   metrics: [
-    { value: "9+", label: "Years building instrumentation, algorithms and analysis end to end" },
+    { value: "7", label: "Students supervised, from experiments to analysis" },
     { value: "PhD", label: "Systems Neuroscience, Weizmann Institute of Science" },
     { value: "2025", label: "First-author publication in Current Biology" }
   ],
@@ -19,7 +19,7 @@ export const hero = {
 export const about = {
   heading: ["Research rigour,", "built end to end"],
   paragraphs: [
-    "Nine years in systems neuroscience, from an MSc and PhD at the Weizmann Institute to a postdoc at the University of Liège. I design the experiment, build the rig it runs on, write the analysis, and work out what the data will and will not support. My first-author work on whisker-generated sounds appeared in Current Biology in 2025.",
+    "From an MSc and PhD in systems neuroscience at the Weizmann Institute to a postdoc at the University of Liège, in collaboration with imec, I design the experiment, build the rig it runs on, write the analysis, and work out what the data will and will not support. My first-author work on whisker-generated sounds appeared in Current Biology in 2025.",
     "The through line now is biologically inspired algorithms and the hardware they run on. Sensory circuits solve a hard engineering problem, moving high-dimensional signals under tight bandwidth, energy and delay budgets. I borrow the parts of that solution that survive contact with real constraints, and I build the systems that test whether they hold.",
     "I reuse what already exists and build only what has to be built, and I move into new domains on purpose: electrophysiology to PyTorch, control theory to LLM pipelines, and back again. Throughout, I would rather report a smaller result I can defend than a larger one I cannot."
   ],
@@ -34,7 +34,7 @@ export const about = {
     },
     {
       title: "Systems & software engineering",
-      items: ["Python, PyTorch, MATLAB", "Real-time closed-loop control", "Multi-sensor synchronisation", "Custom PCB design, Arduino, NI DAQ", "LLM pipelines and agentic systems"]
+      items: ["Python, PyTorch, MATLAB, C++", "Real-time closed-loop control", "Multi-sensor synchronisation", "Custom PCB design, Teensy, Arduino, NI DAQ", "pytest, flake8, GitHub Actions", "LLM pipelines and agentic systems"]
     }
   ]
 };
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     claim:
       "Making a research recording platform capable of closed-loop experiments it was not originally built to run.",
     desc:
-      "I am the technical interface to the imec engineering team on the NEMODAI project. My work is on the platform itself: exposing synchronisation with external devices, extending the API so closed-loop control is possible at all, keeping data streaming stably enough for online computation, and making recordings repeatable without restarting the system between runs. Much of it is finding the workable solution rather than the optimal one, with imec's engineering and scientific staff.",
+      "I am the technical interface to the imec engineering team on the NEMODEI project. My work is on the platform itself: exposing synchronisation with external devices, extending the API so closed-loop control is possible at all, keeping data streaming stably enough for online computation, and making recordings repeatable without restarting the system between runs. Much of it is finding the workable solution rather than the optimal one, with imec's engineering and scientific staff.",
     detail: {
       summary:
         "The underlying platform records 1024 channels at 30 kHz. The engineering contribution is what sits around that: external device synchronisation, an API extended for closed-loop use, and control from Python deep enough to drive an experiment end to end.",
@@ -358,6 +358,13 @@ export const timeline = [
       "Detection and neural encoding of whisker-generated sounds in behaving mice, from the multimodal recording platform through to the statistics. Published in Current Biology."
   },
   {
+    year: "2010–2017",
+    title: "Sound and Light Engineer",
+    org: "Magenta Light and Sound and other productions, Israel",
+    description:
+      "Specified, installed and operated sound and lighting control systems for live productions, delivered to fixed dates for production companies and direct clients."
+  },
+  {
     year: "2013–2016",
     title: "BSc Psychobiology, Magna cum Laude",
     org: "Hebrew University and University of Melbourne exchange",
@@ -396,5 +403,6 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/ben-efron-phd-b19256b2/",
   github: "https://github.com/benefron",
   scholar: "https://scholar.google.com/citations?user=2pXZDx0AAAAJ&hl=en",
-  orcid: "https://orcid.org/0009-0006-5875-6056"
+  orcid: "https://orcid.org/0009-0006-5875-6056",
+  cv: "/documents/CV.pdf"
 };
